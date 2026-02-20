@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dwhnxh122jddc"]
 
-[ext_resource type="Texture2D" uid="uid://eq5jxw8ldwye" path="res://players/player1/img/cooler_idle_asset.png" id="1_n2kgp"]
-[ext_resource type="Texture2D" uid="uid://o6p5rgreq8po" path="res://players/player1/img/cooler_entrada0.png" id="1_y3tjw"]
-[ext_resource type="Texture2D" uid="uid://tpy4f34nbt7n" path="res://players/player1/img/cooler_entrada1.png" id="2_g5ypu"]
-[ext_resource type="Texture2D" uid="uid://dsyyu2dfvaro8" path="res://players/player1/img/cooler_entrada2.png" id="3_pw66f"]
-[ext_resource type="Texture2D" uid="uid://chhuc2ymjk5oh" path="res://players/player1/img/cooler_entrada3.png" id="4_rw0pr"]
-[ext_resource type="Texture2D" uid="uid://dn058r5cvxt5l" path="res://players/player1/img/cooler_entrada4.png" id="5_kl2fv"]
-[ext_resource type="Texture2D" uid="uid://c30h8yka60f8t" path="res://players/player1/img/cooler_entrada5.png" id="6_shu0p"]
-[ext_resource type="Texture2D" uid="uid://dvujx3p0yui2g" path="res://players/player1/img/cooler_punetazo1.png" id="8_6fh44"]
-[ext_resource type="Texture2D" uid="uid://cxfxigx1vwpfu" path="res://players/player1/img/cooler_movimiento1.png" id="8_pw66f"]
-[ext_resource type="Texture2D" uid="uid://cte586u1xdqth" path="res://players/player1/img/cooler_movimiento.png" id="9_rw0pr"]
-[ext_resource type="Texture2D" uid="uid://fykwotq7qk20" path="res://players/player1/img/cooler_punetazo2.png" id="9_t6ou7"]
-[ext_resource type="Texture2D" uid="uid://cn38wk6hh5ut" path="res://players/player1/img/cooler_salto0.png" id="12_kl2fv"]
-[ext_resource type="Texture2D" uid="uid://cy0dt15hjuc3b" path="res://players/player1/img/cooler_salto2.png" id="13_shu0p"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_idle_asset.png" id="1_n2kgp"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada0.png" id="1_y3tjw"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada1.png" id="2_g5ypu"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada2.png" id="3_pw66f"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada3.png" id="4_rw0pr"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada4.png" id="5_kl2fv"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_entrada5.png" id="6_shu0p"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_punetazo1.png" id="8_6fh44"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_movimiento1.png" id="8_pw66f"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_movimiento.png" id="9_rw0pr"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_punetazo2.png" id="9_t6ou7"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_salto0.png" id="12_kl2fv"]
+[ext_resource type="Texture2D" path="res://players/player1/img/cooler_salto2.png" id="13_shu0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gjck"]
 atlas = ExtResource("1_n2kgp")
@@ -196,7 +196,5 @@ animations = [{
 [node name="ani_player1" type="AnimatedSprite2D" parent="." unique_id=1044729661]
 sprite_frames = SubResource("SpriteFrames_g5ypu")
 animation = &"entrada"
-frame = 5
-frame_progress = 1.0
 
 [node name="col_player1" type="CollisionShape2D" parent="." unique_id=1617499870]
