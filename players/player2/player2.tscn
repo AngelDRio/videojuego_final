@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c27xd3jfptlg7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvelj"]
+
+[node name="Player2" type="CharacterBody2D" unique_id=1990140121]
+
+[node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
+sprite_frames = SubResource("SpriteFrames_yvelj")
+frame_progress = 0.22781
+
+[node name="col_player2" type="CollisionShape2D" parent="." unique_id=1187909019]
