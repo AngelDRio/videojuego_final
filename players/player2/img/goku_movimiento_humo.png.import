@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fykwotq7qk20"
-path="res://.godot/imported/cooler_punetazo2.png-5195519ca0a2828546481db71b0e6f22.ctex"
+uid="uid://jdf8at54ejs3"
+path="res://.godot/imported/goku_movimiento_humo.png-4ee4f859e5337eb7fabd320451baf83b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_punetazo2.png"
-dest_files=["res://.godot/imported/cooler_punetazo2.png-5195519ca0a2828546481db71b0e6f22.ctex"]
+source_file="res://players/player2/img/goku_movimiento_humo.png"
+dest_files=["res://.godot/imported/goku_movimiento_humo.png-4ee4f859e5337eb7fabd320451baf83b.ctex"]
 
 [params]
 

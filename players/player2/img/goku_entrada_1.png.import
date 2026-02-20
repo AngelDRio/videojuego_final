@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eq5jxw8ldwye"
-path="res://.godot/imported/cooler_idle_asset.png-1a07460f309a18c14af900ab2569fe78.ctex"
+uid="uid://cq7h2q0bjnqij"
+path="res://.godot/imported/goku_entrada_1.png-eeae5a00dca594a302cb7cacfd270d91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_idle_asset.png"
-dest_files=["res://.godot/imported/cooler_idle_asset.png-1a07460f309a18c14af900ab2569fe78.ctex"]
+source_file="res://players/player2/img/goku_entrada_1.png"
+dest_files=["res://.godot/imported/goku_entrada_1.png-eeae5a00dca594a302cb7cacfd270d91.ctex"]
 
 [params]
 
