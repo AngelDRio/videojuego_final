@@ -1,7 +1,75 @@
 [gd_scene format=3 uid="uid://dwhnxh122jddc"]
 
+[ext_resource type="Texture2D" uid="uid://eq5jxw8ldwye" path="res://players/player1/img/cooler_idle_asset.png" id="1_n2kgp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gjck"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(0, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxrkh"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(62, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2krs5"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(124, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3eef"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(186, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km2q7"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(248, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghd4o"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(186, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mn88"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(124, 0, 62, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3tjw"]
+atlas = ExtResource("1_n2kgp")
+region = Rect2(62, 0, 62, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5ypu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gjck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxrkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2krs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3eef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km2q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghd4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mn88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3tjw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Player1" type="CharacterBody2D" unique_id=503832253]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1044729661]
+sprite_frames = SubResource("SpriteFrames_g5ypu")
+frame_progress = 0.80079055
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1617499870]
