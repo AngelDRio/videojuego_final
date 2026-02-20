@@ -215,7 +215,6 @@ animations = [{
 [node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
 sprite_frames = SubResource("SpriteFrames_yvelj")
 animation = &"salto"
-frame = 2
-frame_progress = 0.462737
+frame_progress = 0.9729598
 
 [node name="col_player2" type="CollisionShape2D" parent="." unique_id=1187909019]
