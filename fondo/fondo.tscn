@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpr8y06byxak6"]
+
+[ext_resource type="Texture2D" uid="uid://x88dswhp8djp" path="res://fondo/img/fondo.jpg" id="1_dq6rq"]
+[ext_resource type="Texture2D" uid="uid://5sr6fc0mxc2" path="res://fondo/img/kami_house.png" id="2_og34b"]
+
+[node name="Fondo" type="ParallaxBackground" unique_id=1505351154]
+
+[node name="layer_fondo" type="ParallaxLayer" parent="." unique_id=263851384]
+
+[node name="Fondo" type="Sprite2D" parent="layer_fondo" unique_id=1173948560]
+position = Vector2(576.5, 327.50003)
+scale = Vector2(0.3369186, 0.45763892)
+texture = ExtResource("1_dq6rq")
+
+[node name="layer_medio" type="ParallaxLayer" parent="." unique_id=1814013151]
+
+[node name="KamiHouse" type="Sprite2D" parent="layer_medio" unique_id=214418061]
+position = Vector2(576.00006, 329.87503)
+scale = Vector2(0.74595994, 0.63514173)
+texture = ExtResource("2_og34b")
