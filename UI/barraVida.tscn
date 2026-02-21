@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://buu0fh2pjn3lv"]
+
+[ext_resource type="Texture2D" uid="uid://bu30ykmhqp1ol" path="res://UI/img/barra de vida1.png" id="1_nxh6j"]
+[ext_resource type="Texture2D" uid="uid://dbpvgfty6g0um" path="res://UI/img/barra de vida2.png" id="2_fnpfq"]
+[ext_resource type="Texture2D" uid="uid://b6hswt6bp5sh0" path="res://UI/img/barra de vida3.png" id="3_wq2x8"]
+[ext_resource type="Texture2D" uid="uid://bn0inpksp322o" path="res://UI/img/barra de vida4.png" id="4_41hop"]
+[ext_resource type="Texture2D" uid="uid://dvboir0csdbc" path="res://UI/img/barra de vida5.png" id="5_p8ppy"]
+[ext_resource type="Texture2D" uid="uid://dqnufdxj22mmy" path="res://UI/img/barra de vida6.png" id="6_542fi"]
+[ext_resource type="Texture2D" uid="uid://df3kdhoakbe3s" path="res://UI/img/barra de vida7.png" id="7_cprc1"]
+[ext_resource type="Texture2D" uid="uid://cr6c8apqofqsk" path="res://UI/img/barra de vida8.png" id="8_qhkxp"]
+[ext_resource type="Script" uid="uid://dh1fday1o4bto" path="res://UI/barra_vida.gd" id="9_7c1gc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dtbkb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nxh6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fnpfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wq2x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_41hop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p8ppy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_542fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cprc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qhkxp")
+}],
+"loop": false,
+"name": &"salud",
+"speed": 5.0
+}]
+
+[node name="BarraVida" type="AnimatedSprite2D" unique_id=812362527]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_dtbkb")
+animation = &"salud"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("9_7c1gc")

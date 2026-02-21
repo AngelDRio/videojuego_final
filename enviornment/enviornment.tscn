@@ -2,10 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://cpr8y06byxak6" path="res://fondo/fondo.tscn" id="1_7rt4j"]
 [ext_resource type="PackedScene" uid="uid://cpg87rb07j6bl" path="res://enviornment/suelo.tscn" id="2_87oke"]
+[ext_resource type="PackedScene" uid="uid://buu0fh2pjn3lv" path="res://UI/barraVida.tscn" id="3_87oke"]
 
 [node name="Enviornment" type="Node2D" unique_id=2019198059]
 
 [node name="Fondo" parent="." unique_id=1505351154 instance=ExtResource("1_7rt4j")]
 
 [node name="Suelo" parent="." unique_id=2114787269 instance=ExtResource("2_87oke")]
-position = Vector2(2, 555)
+position = Vector2(-6, 591)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2069715913]
+
+[node name="BarraVida1" parent="CanvasLayer" unique_id=812362527 instance=ExtResource("3_87oke")]
+position = Vector2(217.00002, 114.00001)
+
+[node name="BarraVida2" parent="CanvasLayer" unique_id=1964359831 instance=ExtResource("3_87oke")]
+position = Vector2(933.00006, 120.00001)
+flip_h = true
