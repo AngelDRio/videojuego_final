@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqblr201u8dn0"
-path="res://.godot/imported/cooler_punetazo.png-162ad5954d082b2ef6c8b101e0dfc5d1.ctex"
+uid="uid://gmcrryx5g6v8"
+path="res://.godot/imported/cooler_movimiento1.png-c4b31b8251cd3d5474160b2bef76fea9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_punetazo.png"
-dest_files=["res://.godot/imported/cooler_punetazo.png-162ad5954d082b2ef6c8b101e0dfc5d1.ctex"]
+source_file="res://players/player1/img/cooler_movimiento1.png"
+dest_files=["res://.godot/imported/cooler_movimiento1.png-c4b31b8251cd3d5474160b2bef76fea9.ctex"]
 
 [params]
 

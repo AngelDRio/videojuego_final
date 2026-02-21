@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3nbny1rj8c2e"
-path="res://.godot/imported/cooler_salto0.png-5a771671858ded045bee00e3ca5cf827.ctex"
+uid="uid://dy6xp0mt1n23c"
+path="res://.godot/imported/cooler_salto5.png-f033be477509240c5b14a0e1ec0f49e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_salto0.png"
-dest_files=["res://.godot/imported/cooler_salto0.png-5a771671858ded045bee00e3ca5cf827.ctex"]
+source_file="res://players/player1/img/cooler_salto5.png"
+dest_files=["res://.godot/imported/cooler_salto5.png-f033be477509240c5b14a0e1ec0f49e2.ctex"]
 
 [params]
 

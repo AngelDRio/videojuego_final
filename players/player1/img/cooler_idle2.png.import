@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwmnwh4s8e1o0"
-path="res://.godot/imported/cooler_entrada4.png-3ff78782df97ad88332745fc504da256.ctex"
+uid="uid://cuuxm7y16y1t8"
+path="res://.godot/imported/cooler_idle2.png-674db8f8d817d2fcaa87538e75c6d51d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_entrada4.png"
-dest_files=["res://.godot/imported/cooler_entrada4.png-3ff78782df97ad88332745fc504da256.ctex"]
+source_file="res://players/player1/img/cooler_idle2.png"
+dest_files=["res://.godot/imported/cooler_idle2.png-674db8f8d817d2fcaa87538e75c6d51d.ctex"]
 
 [params]
 

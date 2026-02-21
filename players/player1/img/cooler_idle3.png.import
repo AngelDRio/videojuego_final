@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj4qphoghn3cg"
-path="res://.godot/imported/cooler_movimiento_humo.png-d9907bd484ab96c26c556be6d284c089.ctex"
+uid="uid://04u5vser6qe3"
+path="res://.godot/imported/cooler_idle3.png-40965756bed35665df5c134f25e1f6c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://players/player1/img/cooler_movimiento_humo.png"
-dest_files=["res://.godot/imported/cooler_movimiento_humo.png-d9907bd484ab96c26c556be6d284c089.ctex"]
+source_file="res://players/player1/img/cooler_idle3.png"
+dest_files=["res://.godot/imported/cooler_idle3.png-40965756bed35665df5c134f25e1f6c3.ctex"]
 
 [params]
 

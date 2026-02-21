@@ -14,7 +14,7 @@ var vida_maxima = 7
 var vida_actual = 7
 
 
-@onready var ani_player = $ani_player1
+@onready var ani_player = $ani_player2
 
 func update_animation(input_axis):
 	if input_axis !=0:
@@ -39,11 +39,11 @@ func apply_friction(input_axis, delta):
 
 func handle_jump():
 	if is_on_floor():
-		if Input.is_action_pressed("cooler_salto"):
+		if Input.is_action_pressed("goku_salto"):
 			velocity.y = jump_force
 
 func _physics_process(delta: float) -> void:
-	var input_axis = Input.get_axis("cooler_izquierda","cooler_derecha")
+	var input_axis = Input.get_axis("goku_izquierda","goku_derecha")
 	apply_gravity(delta)
 	handle_acceleration(input_axis, delta)
 	apply_friction(input_axis, delta)

@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cpg87rb07j6bl" path="res://enviornment/suelo.tscn" id="2_87oke"]
 [ext_resource type="PackedScene" uid="uid://buu0fh2pjn3lv" path="res://UI/barraVida.tscn" id="3_87oke"]
 [ext_resource type="PackedScene" uid="uid://dwhnxh122jddc" path="res://players/player1/player1.tscn" id="5_ao2iw"]
+[ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="6_i1dae"]
+[ext_resource type="Script" uid="uid://cacytelgfbiyu" path="res://players/player2/player_2.gd" id="7_fr7t7"]
 
 [node name="Enviornment" type="Node2D" unique_id=2019198059]
 script = ExtResource("1_auy4o")
@@ -25,3 +27,7 @@ flip_h = true
 
 [node name="Player1" parent="." unique_id=503832253 instance=ExtResource("5_ao2iw")]
 position = Vector2(208, 558)
+
+[node name="Player2" parent="." unique_id=1990140121 instance=ExtResource("6_i1dae")]
+position = Vector2(906, 556)
+script = ExtResource("7_fr7t7")
