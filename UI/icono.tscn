@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dkhkw67jjlf31"]
+
+[ext_resource type="Texture2D" uid="uid://cd1e0yrwessp1" path="res://UI/img/goku_assets (1).png" id="1_6e8e8"]
+[ext_resource type="Texture2D" uid="uid://6f3h1cv8a21w" path="res://UI/img/cooler_assets.png" id="2_cycff"]
+
+[node name="Icono" type="Control" unique_id=1722532996]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 6.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gokuAssets" type="Sprite2D" parent="." unique_id=59764648]
+position = Vector2(1128, 32)
+texture = ExtResource("1_6e8e8")
+
+[node name="coolerAssets" type="Sprite2D" parent="." unique_id=20354416]
+position = Vector2(23, 31)
+texture = ExtResource("2_cycff")
+flip_h = true

@@ -1,20 +1,14 @@
 [gd_scene format=3 uid="uid://cpr8y06byxak6"]
 
-[ext_resource type="Texture2D" uid="uid://x88dswhp8djp" path="res://fondo/img/fondo.jpg" id="1_dq6rq"]
-[ext_resource type="Texture2D" uid="uid://5sr6fc0mxc2" path="res://fondo/img/kami_house.png" id="2_og34b"]
+[ext_resource type="Texture2D" uid="uid://bmpxhsm65ebae" path="res://fondo/img/fondo2.jpg" id="1_0qi51"]
 
 [node name="Fondo" type="ParallaxBackground" unique_id=1505351154]
 
 [node name="layer_fondo" type="ParallaxLayer" parent="." unique_id=263851384]
 
-[node name="Fondo" type="Sprite2D" parent="layer_fondo" unique_id=1173948560]
-position = Vector2(574.5, 320.5)
-scale = Vector2(0.33343023, 0.44791663)
-texture = ExtResource("1_dq6rq")
+[node name="Fondo2" type="Sprite2D" parent="layer_fondo" unique_id=314863287]
+position = Vector2(576, 319)
+scale = Vector2(1.1989583, 1.0128205)
+texture = ExtResource("1_0qi51")
 
 [node name="layer_medio" type="ParallaxLayer" parent="." unique_id=1814013151]
-
-[node name="KamiHouse" type="Sprite2D" parent="layer_medio" unique_id=214418061]
-position = Vector2(576, 288)
-scale = Vector2(0.74595994, 0.63514173)
-texture = ExtResource("2_og34b")
