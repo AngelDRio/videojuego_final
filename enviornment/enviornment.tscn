@@ -12,7 +12,7 @@ script = ExtResource("1_auy4o")
 [node name="Fondo" parent="." unique_id=1505351154 instance=ExtResource("1_7rt4j")]
 
 [node name="Suelo" parent="." unique_id=2114787269 instance=ExtResource("2_87oke")]
-position = Vector2(-6, 591)
+position = Vector2(0, 558)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2069715913]
 

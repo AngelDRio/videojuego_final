@@ -8,13 +8,13 @@
 [node name="layer_fondo" type="ParallaxLayer" parent="." unique_id=263851384]
 
 [node name="Fondo" type="Sprite2D" parent="layer_fondo" unique_id=1173948560]
-position = Vector2(576.5, 327.50003)
-scale = Vector2(0.3369186, 0.45763892)
+position = Vector2(574.5, 320.5)
+scale = Vector2(0.33343023, 0.44791663)
 texture = ExtResource("1_dq6rq")
 
 [node name="layer_medio" type="ParallaxLayer" parent="." unique_id=1814013151]
 
 [node name="KamiHouse" type="Sprite2D" parent="layer_medio" unique_id=214418061]
-position = Vector2(576.00006, 329.87503)
+position = Vector2(576, 288)
 scale = Vector2(0.74595994, 0.63514173)
 texture = ExtResource("2_og34b")
