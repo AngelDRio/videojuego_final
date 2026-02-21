@@ -8,10 +8,3 @@ func _on_btn_start_pressed():
 
 func _on_btn_end_pressed():
 	get_tree().quit()
-
-
-
-
-
-func _on_btn_exit_pressed() -> void:
-	get_tree().quit()

@@ -29,8 +29,8 @@ flip_h = true
 [node name="Icono" parent="CanvasLayer" unique_id=1722532996 instance=ExtResource("5_fr7t7")]
 
 [node name="Player1" parent="." unique_id=503832253 instance=ExtResource("5_ao2iw")]
-position = Vector2(208, 558)
+position = Vector2(242, 538)
 
 [node name="Player2" parent="." unique_id=1990140121 instance=ExtResource("6_i1dae")]
-position = Vector2(906, 556)
+position = Vector2(891, 522)
 script = ExtResource("7_fr7t7")

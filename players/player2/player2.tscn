@@ -182,9 +182,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f6yit")
 }],
-"loop": true,
+"loop": false,
 "name": &"punetazo",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -211,16 +211,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6mul"]
-size = Vector2(54, 71)
+size = Vector2(45, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0opxv"]
+size = Vector2(28.5, 22)
 
 [node name="Player2" type="CharacterBody2D" unique_id=1990140121]
 
 [node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
 scale = Vector2(1.35, 1.35)
 sprite_frames = SubResource("SpriteFrames_yvelj")
-animation = &"salto"
+animation = &"punetazo"
+frame = 5
+frame_progress = 1.0
 flip_h = true
 
 [node name="col_player2" type="CollisionShape2D" parent="." unique_id=1187909019]
-position = Vector2(-3, 10.5)
+position = Vector2(6.5, 4)
 shape = SubResource("RectangleShape2D_t6mul")
+
+[node name="hitbox_player2" type="Area2D" parent="." unique_id=1688707932]
+
+[node name="col_ataque_player2" type="CollisionShape2D" parent="hitbox_player2" unique_id=430827922]
+position = Vector2(-18.75, 0)
+shape = SubResource("RectangleShape2D_0opxv")
+debug_color = Color(0.91444737, 0.2603261, 0.34402975, 0.41960785)
