@@ -8,6 +8,10 @@ extends CharacterBody2D
 @export var air_acceleration = 2000
 @export var air_friction = 700
 
+#variables de la vida para la barra de vida
+signal actualizar_interfaz_vida(puntos) 
+var vida_maxima = 7
+var vida_actual = 7
 
 
 @onready var ani_player = $ani_player1
@@ -37,7 +41,12 @@ func handle_jump():
 	if is_on_floor():
 		if Input.is_action_pressed("saltar"):
 			velocity.y = jump_force
-		
+
+
+
+
+
+
 func _physics_process(delta: float) -> void:
 	var input_axis = Input.get_axis("mover_izquierda","mover_derecha")
 	apply_gravity(delta)
@@ -56,3 +65,8 @@ func handle_air_acceleration(input_axis, delta):
 	if is_on_floor(): return
 	if input_axis != 0:
 		velocity.x = move_toward(velocity.x, speed*input_axis, air_acceleration *delta)
+
+
+func quitar_vida(cantidad):
+	vida_actual = clamp(vida_actual - cantidad, 0, 7)
+	actualizar_interfaz_vida.emit(vida_actual)
