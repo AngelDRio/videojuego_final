@@ -10,4 +10,4 @@ func _on_btn_end_pressed():
 
 
 func _on_btn_exit_pressed() -> void:
-	pass # Replace with function body.
+	_on_btn_end_pressed()
