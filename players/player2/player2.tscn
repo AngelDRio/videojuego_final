@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c27xd3jfptlg7"]
 
+[ext_resource type="Script" uid="uid://cacytelgfbiyu" path="res://players/player2/player_2.gd" id="1_7to51"]
 [ext_resource type="Texture2D" uid="uid://drjy0ovarsfc3" path="res://players/player2/img/goku_idle.png" id="1_t6mul"]
 [ext_resource type="Texture2D" uid="uid://cq7h2q0bjnqij" path="res://players/player2/img/goku_entrada_1.png" id="2_0opxv"]
 [ext_resource type="Texture2D" uid="uid://dn1rx02g7bbbo" path="res://players/player2/img/goku_entrada_2.png" id="3_7to51"]
 [ext_resource type="Texture2D" uid="uid://bkecutb0yyygt" path="res://players/player2/img/goku_movimiento.png" id="4_nctxk"]
 [ext_resource type="Texture2D" uid="uid://jdf8at54ejs3" path="res://players/player2/img/goku_movimiento_humo.png" id="5_t0ur8"]
 [ext_resource type="Texture2D" uid="uid://onj2jxhtoqk7" path="res://players/player2/img/goku_punetazo.png" id="6_gvoma"]
+[ext_resource type="Texture2D" uid="uid://cyswd818egt7m" path="res://players/player2/img/goku_recibir_dano.png" id="7_0opxv"]
 [ext_resource type="Texture2D" uid="uid://cxqox8yqv6sxd" path="res://players/player2/img/goku_salto.png" id="7_ttcra"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upofk"]
@@ -79,6 +81,10 @@ region = Rect2(245, 0, 49, 58)
 [sub_resource type="AtlasTexture" id="AtlasTexture_f6yit"]
 atlas = ExtResource("6_gvoma")
 region = Rect2(294, 0, 49, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7to51"]
+atlas = ExtResource("7_0opxv")
+region = Rect2(49, 0, 49, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmq52"]
 atlas = ExtResource("7_ttcra")
@@ -188,6 +194,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7to51")
+}],
+"loop": true,
+"name": &"recibir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lmq52")
 }, {
 "duration": 1.0,
@@ -214,9 +228,10 @@ animations = [{
 size = Vector2(45, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0opxv"]
-size = Vector2(28.5, 22)
+size = Vector2(81, 22)
 
-[node name="Player2" type="CharacterBody2D" unique_id=1990140121]
+[node name="Player2" type="CharacterBody2D" unique_id=1990140121 groups=["Jugador2"]]
+script = ExtResource("1_7to51")
 
 [node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
 scale = Vector2(1.35, 1.35)
@@ -231,8 +246,11 @@ position = Vector2(6.5, 4)
 shape = SubResource("RectangleShape2D_t6mul")
 
 [node name="hitbox_player2" type="Area2D" parent="." unique_id=1688707932]
+collision_layer = 2
 
 [node name="col_ataque_player2" type="CollisionShape2D" parent="hitbox_player2" unique_id=430827922]
-position = Vector2(-18.75, 0)
+position = Vector2(7.5, 0)
 shape = SubResource("RectangleShape2D_0opxv")
 debug_color = Color(0.91444737, 0.2603261, 0.34402975, 0.41960785)
+
+[connection signal="body_entered" from="hitbox_player2" to="." method="_on_hitbox_player_2_body_entered"]
