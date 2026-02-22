@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://n5rxhoar1wq1" path="res://players/player2/img/goku_muerte4.png" id="10_1hc56"]
 [ext_resource type="Texture2D" uid="uid://dblaadef7uu0g" path="res://players/player2/img/goku_muerte5.png" id="11_j2pm6"]
 [ext_resource type="Texture2D" uid="uid://b1wwiu4fjnbi3" path="res://players/player2/img/goku_muerte6.png" id="12_expqn"]
+[ext_resource type="AudioStream" uid="uid://ppckikgxe1hk" path="res://players/punetazo.mp3" id="16_2pj68"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upofk"]
 atlas = ExtResource("2_0opxv")
@@ -279,5 +280,9 @@ collision_layer = 2
 position = Vector2(7.5, 0)
 shape = SubResource("RectangleShape2D_0opxv")
 debug_color = Color(0.91444737, 0.2603261, 0.34402975, 0.41960785)
+
+[node name="Punetazo" type="AudioStreamPlayer" parent="." unique_id=909556439]
+stream = ExtResource("16_2pj68")
+volume_db = -19.414
 
 [connection signal="body_entered" from="hitbox_player2" to="." method="_on_hitbox_player_2_body_entered"]

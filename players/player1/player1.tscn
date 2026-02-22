@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://3ibm4uuh6vm" path="res://players/player1/img/cooler_salto3.png" id="23_4mh7x"]
 [ext_resource type="Texture2D" uid="uid://d0p620k1opk67" path="res://players/player1/img/cooler_salto4.png" id="24_5tqt4"]
 [ext_resource type="Texture2D" uid="uid://dy6xp0mt1n23c" path="res://players/player1/img/cooler_salto5.png" id="25_qhqrk"]
+[ext_resource type="AudioStream" uid="uid://ppckikgxe1hk" path="res://players/punetazo.mp3" id="27_nkv1e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g5ypu"]
 animations = [{
@@ -184,5 +185,9 @@ collision_mask = 3
 position = Vector2(2.5, -4)
 shape = SubResource("RectangleShape2D_57ttj")
 debug_color = Color(0.9218867, 0.25909185, 0.27583176, 0.41960785)
+
+[node name="Punetazo" type="AudioStreamPlayer" parent="." unique_id=237978501]
+stream = ExtResource("27_nkv1e")
+volume_db = -19.414
 
 [connection signal="body_entered" from="hitbox_player1" to="." method="_on_hitbox_player_1_body_entered"]

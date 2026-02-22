@@ -13,6 +13,7 @@ var vida_maxima = 7
 var vida_actual = 7
 var muerto = false
 
+@onready var sonido_punetazo = $Punetazo
 @onready var ani_player = $ani_player2
 @onready var hitbox = $hitbox_player2
 
@@ -121,6 +122,10 @@ func handle_air_acceleration(input_axis, delta):
 func _on_frame_changed():
 	if ani_player.animation == "punetazo":
 		hitbox.monitoring = true
+		
+		if ani_player.frame == 2: 
+			sonido_punetazo.play()
+			
 		if ani_player.frame == ani_player.sprite_frames.get_frame_count("punetazo") - 1:
 			atacando = false
 			hitbox.monitoring = false
