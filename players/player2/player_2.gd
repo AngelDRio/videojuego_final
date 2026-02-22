@@ -29,6 +29,8 @@ var invencible_timer = 0.0
 var hitbox_offset_x
 var mirando_izquierda = false
 
+var entrando = true
+
 func _ready():
 	add_to_group("jugador2")
 	hitbox.monitoring = false
@@ -40,8 +42,12 @@ func _ready():
 	hitbox_offset_x = hitbox.position.x
 	
 	ani_player.animation_finished.connect(_on_animation_finished)
-
+	ani_player.play("entrada")
 func _physics_process(delta):
+	if entrando: 
+		move_and_slide()
+		return
+
 	if muerto:
 		apply_gravity(delta)
 		move_and_slide()
@@ -207,6 +213,9 @@ func _on_hitbox_player_2_body_entered(body: Node2D) -> void:
 		body.recibir_golpe(1, global_position)
 		
 func _on_animation_finished():
+	if ani_player.animation == "entrada":
+		entrando = false
+		ani_player.play("idle")
 	if ani_player.animation == "punetazo":
 		atacando = false
 		hitbox.monitoring = false
