@@ -127,8 +127,7 @@ func _on_frame_changed():
 
 func recibir_golpe(danio, posicion_enemigo):
 	if invencible: return
-	
-	vida_actual = clamp(vida_actual - danio, 0, vida_maxima)
+	quitar_vida(danio)
 	actualizar_interfaz_vida.emit(vida_actual)
 	
 	estuneado = true
@@ -155,3 +154,29 @@ func _on_hitbox_player_2_body_entered(body: Node2D) -> void:
 		print("ES EL JUGADOR 1") # <--- Añade esto
 		if body.has_method("recibir_golpe"):
 			body.recibir_golpe(1, global_position)
+
+#Controlar la vida
+func _on_vida_p1_cambiada(puntos):
+	var barra = get_node_or_null("CapaInterfaz/BarraVidaP1")
+	if barra != null:
+		barra.frame = puntos  # Cambia el frame según la vida actual
+
+func _on_vida_p2_cambiada(puntos):
+	var barra = get_node_or_null("CapaInterfaz/BarraVidaP2")
+	if barra != null:
+		barra.frame = puntos
+
+func quitar_vida(danio: int):
+	vida_actual = clamp(vida_actual - danio, 0, vida_maxima)
+	actualizar_interfaz_vida.emit(vida_actual)
+	print("Vida actual:", vida_actual) 
+	if vida_actual <= 0:
+		print("Player va a morir")
+		morir()
+
+func morir():
+	atacando = false
+	estuneado = true
+	velocity = Vector2.ZERO
+	hitbox.monitoring = false
+	queue_free()
