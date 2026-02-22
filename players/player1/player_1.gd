@@ -20,9 +20,15 @@ var vida_actual = 7
 # ESTADO
 var atacando = false
 
+#HITBOX ATAQUE DONDE MIRE
+var hitbox_offset_x
+var mirando_izquierda = false
+
 func _ready():
 	hitbox.monitoring = false
 	ani_player.frame_changed.connect(_on_frame_changed)
+	#CAMBIAR HITBOX DE LADO
+	hitbox_offset_x = hitbox.position.x
 
 func _physics_process(delta):
 	var input_axis = Input.get_axis("cooler_izquierda", "cooler_derecha")
@@ -60,11 +66,20 @@ func _physics_process(delta):
 
 # ANIMACIONES
 func update_animation(input_axis):
+	if input_axis != 0:
+		mirando_izquierda = input_axis < 0
+		ani_player.flip_h = mirando_izquierda
+
+		# mover hitbox al lado correcto
+		if mirando_izquierda:
+			hitbox.position.x = -abs(hitbox_offset_x)
+		else:
+			hitbox.position.x = abs(hitbox_offset_x)
+
 	if atacando:
 		return
 
 	if input_axis != 0:
-		ani_player.flip_h = input_axis < 0
 		ani_player.play("movimiento")
 	elif not is_on_floor():
 		ani_player.play("salto")
