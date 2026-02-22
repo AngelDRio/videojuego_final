@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dwhnxh122jddc" path="res://players/player1/player1.tscn" id="5_ao2iw"]
 [ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://UI/icono.tscn" id="5_fr7t7"]
 [ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="6_i1dae"]
+[ext_resource type="AudioStream" uid="uid://dkaa6ucnvckto" path="res://enviornment/pelea.mp3" id="8_fr7t7"]
 
 [node name="Enviornment" type="Node2D" unique_id=2019198059]
 script = ExtResource("1_auy4o")
@@ -44,3 +45,9 @@ one_shot = true
 autostart = true
 
 [node name="vida" type="Node2D" parent="." unique_id=1384667081]
+
+[node name="Pelea" type="AudioStreamPlayer" parent="." unique_id=1346188448]
+stream = ExtResource("8_fr7t7")
+volume_db = -20.411
+autoplay = true
+parameters/looping = true
