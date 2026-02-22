@@ -3,9 +3,16 @@ extends Node2D
 var vida_extr_escena = preload("res://bonus/VidaExtra.tscn")
 @onready var temporizdor = $Timer
 @onready var interfaz = $CapaInterfaz
+@onready var knockout = $CanvasLayer/Knockout
+
+func mostrar_knockout():
+	knockout.show()   # Mostramos cuando alguien muera
+	get_tree().paused = true
 
 func _ready() -> void:
 	if interfaz == null: return
+	if knockout:
+		knockout.hide()
 
 
 	if has_node("Player1"):

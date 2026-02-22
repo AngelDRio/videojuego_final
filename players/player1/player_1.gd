@@ -159,26 +159,39 @@ func quitar_vida(danio: int):
 		morir()
 
 func morir():
-	if muerto: return
+	if muerto:
+		return
 	muerto = true
-	
+
 	atacando = false
 	estuneado = true
 	invencible = true
-	
+
+	# Desactivar colisiones
 	set_collision_layer_value(1, false)
 	set_collision_layer_value(2, false)
 	hitbox.set_deferred("monitoring", false)
 
+	# Mostrar KO en la escena principal
+	get_tree().current_scene.mostrar_knockout()
+
 	if ani_player.sprite_frames.has_animation("muerte"):
 		ani_player.play("muerte")
 		
-		get_tree().create_timer(4.0).timeout.connect(func(): if is_inside_tree(): queue_free())
-		
+		# Esperar a que termine la animación de muerte
 		await ani_player.animation_finished
-		queue_free()
+		
+		# Liberar el jugador después de 4 segundos
+		var timer = get_tree().create_timer(4.0, true) # true = ignora pausa
+		await timer.timeout
+		if is_inside_tree():
+			queue_free()
 	else:
-		queue_free()
+		# Si no hay animación de muerte, simplemente eliminar después de 4 segundos
+		var timer = get_tree().create_timer(4.0, true)
+		await timer.timeout
+		if is_inside_tree():
+			queue_free()
 
 func handle_invencible(delta):
 	if invencible:
