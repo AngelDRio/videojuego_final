@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dgr4v6abt84kk" path="res://players/player1/img/cooler_punetazo4.png" id="18_jq6q4"]
 [ext_resource type="Texture2D" uid="uid://f3s4cqqsevsc" path="res://players/player1/img/cooler_punetazo5.png" id="19_oxp6o"]
 [ext_resource type="Texture2D" uid="uid://dksudv5fwcl2h" path="res://players/player1/img/cooler_punetazo6.png" id="20_ox8no"]
+[ext_resource type="Texture2D" uid="uid://bf8iuyn444uog" path="res://players/player1/img/cooler_recibirdano.png" id="21_c8wrb"]
 [ext_resource type="Texture2D" uid="uid://6ybb5wssb288" path="res://players/player1/img/cooler_salto1.png" id="21_ogxfo"]
 [ext_resource type="Texture2D" uid="uid://3ibm4uuh6vm" path="res://players/player1/img/cooler_salto3.png" id="23_4mh7x"]
 [ext_resource type="Texture2D" uid="uid://d0p620k1opk67" path="res://players/player1/img/cooler_salto4.png" id="24_5tqt4"]
@@ -107,6 +108,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("21_c8wrb")
+}],
+"loop": true,
+"name": &"recibir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("21_ogxfo")
 }, {
 "duration": 1.0,
@@ -130,9 +139,10 @@ animations = [{
 size = Vector2(33, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57ttj"]
-size = Vector2(30, 22)
+size = Vector2(83, 22)
 
-[node name="Player1" type="CharacterBody2D" unique_id=503832253]
+[node name="Player1" type="CharacterBody2D" unique_id=503832253 groups=["Jugador1"]]
+collision_mask = 3
 script = ExtResource("1_shu0p")
 
 [node name="ani_player1" type="AnimatedSprite2D" parent="." unique_id=1044729661]
@@ -149,8 +159,11 @@ shape = SubResource("RectangleShape2D_shu0p")
 debug_color = Color(0.6822122, 0.30815247, 0.98381156, 0.41960785)
 
 [node name="hitbox_player1" type="Area2D" parent="." unique_id=1826085329]
+collision_mask = 3
 
 [node name="col_ataque_player1" type="CollisionShape2D" parent="hitbox_player1" unique_id=154327100]
-position = Vector2(33, -3)
+position = Vector2(2.5, -4)
 shape = SubResource("RectangleShape2D_57ttj")
 debug_color = Color(0.9218867, 0.25909185, 0.27583176, 0.41960785)
+
+[connection signal="body_entered" from="hitbox_player1" to="." method="_on_hitbox_player_1_body_entered"]
