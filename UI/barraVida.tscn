@@ -8,34 +8,33 @@
 [ext_resource type="Texture2D" uid="uid://dqnufdxj22mmy" path="res://UI/img/barra de vida6.png" id="6_542fi"]
 [ext_resource type="Texture2D" uid="uid://df3kdhoakbe3s" path="res://UI/img/barra de vida7.png" id="7_cprc1"]
 [ext_resource type="Texture2D" uid="uid://cr6c8apqofqsk" path="res://UI/img/barra de vida8.png" id="8_qhkxp"]
-[ext_resource type="Script" uid="uid://dh1fday1o4bto" path="res://UI/barra_vida.gd" id="9_7c1gc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dtbkb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nxh6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_fnpfq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_wq2x8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_41hop")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_p8ppy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_542fi")
+"texture": ExtResource("8_qhkxp")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_cprc1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_qhkxp")
+"texture": ExtResource("6_542fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p8ppy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_41hop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wq2x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fnpfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_nxh6j")
 }],
 "loop": false,
 "name": &"salud",
@@ -47,5 +46,3 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_dtbkb")
 animation = &"salud"
 frame = 7
-frame_progress = 1.0
-script = ExtResource("9_7c1gc")

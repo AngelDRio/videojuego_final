@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cftk0yah5401" path="res://enviornment/enviornment.gd" id="1_auy4o"]
 [ext_resource type="PackedScene" uid="uid://cpg87rb07j6bl" path="res://enviornment/suelo.tscn" id="2_87oke"]
 [ext_resource type="PackedScene" uid="uid://buu0fh2pjn3lv" path="res://UI/barraVida.tscn" id="3_87oke"]
+[ext_resource type="Script" uid="uid://birykw1ch3al7" path="res://enviornment/canvas_layer.gd" id="4_fr7t7"]
 [ext_resource type="PackedScene" uid="uid://dwhnxh122jddc" path="res://players/player1/player1.tscn" id="5_ao2iw"]
 [ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://UI/icono.tscn" id="5_fr7t7"]
 [ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="6_i1dae"]
@@ -17,16 +18,19 @@ metadata/_edit_vertical_guides_ = [1148.0]
 [node name="Suelo" parent="." unique_id=2114787269 instance=ExtResource("2_87oke")]
 position = Vector2(0, 558)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2069715913]
+[node name="CapaInterfaz" type="CanvasLayer" parent="." unique_id=2069715913]
+script = ExtResource("4_fr7t7")
 
-[node name="BarraVida1" parent="CanvasLayer" unique_id=812362527 instance=ExtResource("3_87oke")]
+[node name="BarraVida1" parent="CapaInterfaz" unique_id=812362527 instance=ExtResource("3_87oke")]
 position = Vector2(217.00002, 114.00001)
+frame_progress = 0.0
 
-[node name="BarraVida2" parent="CanvasLayer" unique_id=1964359831 instance=ExtResource("3_87oke")]
+[node name="BarraVida2" parent="CapaInterfaz" unique_id=1964359831 instance=ExtResource("3_87oke")]
 position = Vector2(933.00006, 120.00001)
+frame_progress = 0.0
 flip_h = true
 
-[node name="Icono" parent="CanvasLayer" unique_id=1722532996 instance=ExtResource("5_fr7t7")]
+[node name="Icono" parent="CapaInterfaz" unique_id=1722532996 instance=ExtResource("5_fr7t7")]
 
 [node name="Player1" parent="." unique_id=503832253 instance=ExtResource("5_ao2iw")]
 position = Vector2(208, 558)

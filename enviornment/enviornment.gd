@@ -1,31 +1,29 @@
 extends Node2D
 
-var vida_extr_escena =preload("res://bonus/VidaExtra.tscn")
-
+var vida_extr_escena = preload("res://bonus/VidaExtra.tscn")
 @onready var temporizdor = $Timer
+@onready var interfaz = $CapaInterfaz
 
 func _ready() -> void:
+	if interfaz == null: return
+
+
 	if has_node("Player1"):
-		$Player1.actualizar_interfaz_vida.connect(_on_vida_p1_cambiada)
+		var p1 = $Player1
+		p1.actualizar_interfaz_vida.connect(interfaz.actualizar_barra_p1)
+		interfaz.actualizar_barra_p1(p1.vida_actual)
+	
 	if has_node("Player2"):
-		$Player2.actualizar_interfaz_vida.connect(_on_vida_p1_cambiada)
+		var p2 = $Player2
+		p2.actualizar_interfaz_vida.connect(interfaz.actualizar_barra_p2)
+		interfaz.actualizar_barra_p2(p2.vida_actual)
+		
 	temporizdor.timeout.connect(aparecer_bola)
 
 func aparecer_bola():
 	if get_tree().get_nodes_in_group("bolas_vida").size() < 1:
 		var nueva_bola = vida_extr_escena.instantiate()
-		
 		nueva_bola.add_to_group("bolas_vida")
-		
-		var x_aleatoria = randf_range(334, 816) # Un poco de margen por los lados
+		var x_aleatoria = randf_range(334, 816) 
 		nueva_bola.position = Vector2(x_aleatoria, 349)
-		
 		add_child(nueva_bola)
-
-func _on_vida_p1_cambiada(puntos):
-	var barra = get_node_or_null("CapaInterfaz/BarraVidaP1")
-	if barra != null:
-		barra.frame = puntos
-
-func _process(delta: float) -> void:
-	pass

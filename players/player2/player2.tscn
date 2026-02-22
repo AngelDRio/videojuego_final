@@ -8,7 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://jdf8at54ejs3" path="res://players/player2/img/goku_movimiento_humo.png" id="5_t0ur8"]
 [ext_resource type="Texture2D" uid="uid://onj2jxhtoqk7" path="res://players/player2/img/goku_punetazo.png" id="6_gvoma"]
 [ext_resource type="Texture2D" uid="uid://cyswd818egt7m" path="res://players/player2/img/goku_recibir_dano.png" id="7_0opxv"]
+[ext_resource type="Texture2D" uid="uid://ds64soy7c4ifx" path="res://players/player2/img/goku_muerte1.png" id="7_7cju7"]
 [ext_resource type="Texture2D" uid="uid://cxqox8yqv6sxd" path="res://players/player2/img/goku_salto.png" id="7_ttcra"]
+[ext_resource type="Texture2D" uid="uid://crx3i8oas3q85" path="res://players/player2/img/goku_muerte2.png" id="8_2pj68"]
+[ext_resource type="Texture2D" uid="uid://yo3rtumqy5rx" path="res://players/player2/img/goku_muerte3.png" id="9_upofk"]
+[ext_resource type="Texture2D" uid="uid://n5rxhoar1wq1" path="res://players/player2/img/goku_muerte4.png" id="10_1hc56"]
+[ext_resource type="Texture2D" uid="uid://dblaadef7uu0g" path="res://players/player2/img/goku_muerte5.png" id="11_j2pm6"]
+[ext_resource type="Texture2D" uid="uid://b1wwiu4fjnbi3" path="res://players/player2/img/goku_muerte6.png" id="12_expqn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upofk"]
 atlas = ExtResource("2_0opxv")
@@ -171,6 +177,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("7_7cju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2pj68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_upofk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1hc56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j2pm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_expqn")
+}],
+"loop": false,
+"name": &"muerte",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_7ueea")
 }, {
 "duration": 1.0,
@@ -236,9 +265,7 @@ script = ExtResource("1_7to51")
 [node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
 scale = Vector2(1.35, 1.35)
 sprite_frames = SubResource("SpriteFrames_yvelj")
-animation = &"punetazo"
-frame = 5
-frame_progress = 1.0
+animation = &"muerte"
 flip_h = true
 
 [node name="col_player2" type="CollisionShape2D" parent="." unique_id=1187909019]

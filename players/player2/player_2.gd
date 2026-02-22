@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-# ====== CONFIGURACIÓN ======
 @export var gravity_scale = 2
 @export var speed = 500
 @export var acceleration = 600
@@ -9,34 +8,30 @@ extends CharacterBody2D
 @export var air_acceleration = 2000
 @export var air_friction = 150
 
-# VIDA
 signal actualizar_interfaz_vida(puntos)
 var vida_maxima = 7
 var vida_actual = 7
+var muerto = false
 
-# NODOS
 @onready var ani_player = $ani_player2
 @onready var hitbox = $hitbox_player2
 
-# ESTADOS
 var atacando = false
 var estuneado = false
 var invencible = false
 
-# TIMERS
 @export var tiempo_stun = 0.5
 @export var tiempo_invencible = 1.0
 var stun_timer = 0.0
 var invencible_timer = 0.0
 
-# HITBOX
 var hitbox_offset_x
 var mirando_izquierda = false
 
 func _ready():
 	add_to_group("jugador2")
 	hitbox.monitoring = false
-	# Esto asegura que la señal se conecte sí o sí al arrancar
+	
 	if not hitbox.body_entered.is_connected(_on_hitbox_player_2_body_entered):
 		hitbox.body_entered.connect(_on_hitbox_player_2_body_entered)
 	
@@ -44,6 +39,11 @@ func _ready():
 	hitbox_offset_x = hitbox.position.x
 
 func _physics_process(delta):
+	if muerto:
+		apply_gravity(delta)
+		move_and_slide()
+		return
+	
 	handle_invencible(delta)
 	
 	if estuneado:
@@ -51,7 +51,6 @@ func _physics_process(delta):
 		apply_gravity(delta)
 		move_and_slide()
 		ani_player.play("recibir")
-		
 		if stun_timer <= 0:
 			estuneado = false
 		return
@@ -81,6 +80,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func update_animation(input_axis):
+	if muerto: return
+	
 	if input_axis != 0:
 		mirando_izquierda = input_axis < 0
 		ani_player.flip_h = mirando_izquierda
@@ -120,24 +121,57 @@ func handle_air_acceleration(input_axis, delta):
 func _on_frame_changed():
 	if ani_player.animation == "punetazo":
 		hitbox.monitoring = true
-
 		if ani_player.frame == ani_player.sprite_frames.get_frame_count("punetazo") - 1:
 			atacando = false
 			hitbox.monitoring = false
 
 func recibir_golpe(danio, posicion_enemigo):
-	if invencible: return
-	quitar_vida(danio)
-	actualizar_interfaz_vida.emit(vida_actual)
-	
-	estuneado = true
-	stun_timer = tiempo_stun
-	invencible = true
-	invencible_timer = tiempo_invencible
-	atacando = false
-	ani_player.play("recibir")
+	if muerto or invencible:
+		return
+		
 	var direccion = 1 if global_position.x > posicion_enemigo.x else -1
 	velocity = Vector2(direccion * 200, -150)
+	
+	quitar_vida(danio)
+	
+	if not muerto:
+		estuneado = true
+		stun_timer = tiempo_stun
+		invencible = true
+		invencible_timer = tiempo_invencible
+		atacando = false
+		ani_player.play("recibir")
+
+func quitar_vida(danio: int):
+	if muerto: return
+	
+	vida_actual = clamp(vida_actual - danio, 0, vida_maxima)
+	actualizar_interfaz_vida.emit(vida_actual)
+	
+	if vida_actual <= 0:
+		morir()
+
+func morir():
+	if muerto: return
+	muerto = true
+	
+	atacando = false
+	estuneado = true
+	invencible = true
+	
+	set_collision_layer_value(1, false)
+	set_collision_layer_value(2, false)
+	hitbox.set_deferred("monitoring", false)
+
+	if ani_player.sprite_frames.has_animation("muerte"):
+		ani_player.play("muerte")
+		
+		get_tree().create_timer(4.0).timeout.connect(func(): if is_inside_tree(): queue_free())
+		
+		await ani_player.animation_finished
+		queue_free()
+	else:
+		queue_free()
 
 func handle_invencible(delta):
 	if invencible:
@@ -147,36 +181,6 @@ func handle_invencible(delta):
 			invencible = false
 			modulate.a = 1.0
 
-
 func _on_hitbox_player_2_body_entered(body: Node2D) -> void:
-	print("¡ALGO HA ENTRADO EN LA HITBOX!") # <--- Añade esto
-	if body.is_in_group("jugador1"):
-		print("ES EL JUGADOR 1") # <--- Añade esto
-		if body.has_method("recibir_golpe"):
-			body.recibir_golpe(1, global_position)
-
-#Controlar la vida
-func _on_vida_p1_cambiada(puntos):
-	var barra = get_node_or_null("CapaInterfaz/BarraVidaP1")
-	if barra != null:
-		barra.frame = puntos  # Cambia el frame según la vida actual
-
-func _on_vida_p2_cambiada(puntos):
-	var barra = get_node_or_null("CapaInterfaz/BarraVidaP2")
-	if barra != null:
-		barra.frame = puntos
-
-func quitar_vida(danio: int):
-	vida_actual = clamp(vida_actual - danio, 0, vida_maxima)
-	actualizar_interfaz_vida.emit(vida_actual)
-	print("Vida actual:", vida_actual) 
-	if vida_actual <= 0:
-		print("Player va a morir")
-		morir()
-
-func morir():
-	atacando = false
-	estuneado = true
-	velocity = Vector2.ZERO
-	hitbox.monitoring = false
-	queue_free()
+	if body.is_in_group("jugador1") and body.has_method("recibir_golpe"):
+		body.recibir_golpe(1, global_position)

@@ -17,7 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://gmcrryx5g6v8" path="res://players/player1/img/cooler_movimiento1.png" id="13_57ttj"]
 [ext_resource type="Texture2D" uid="uid://gvg5ks11clr1" path="res://players/player1/img/cooler_salto2.png" id="13_shu0p"]
 [ext_resource type="Texture2D" uid="uid://bjnwh7v3ne8t8" path="res://players/player1/img/cooler_movimiento2.png" id="14_c8wrb"]
+[ext_resource type="Texture2D" uid="uid://bipto7usyvaic" path="res://players/player1/img/cooler_muerte1.png" id="15_ox8no"]
+[ext_resource type="Texture2D" uid="uid://c3nynfl5ajr4t" path="res://players/player1/img/cooler_muerte2.png" id="16_ogxfo"]
+[ext_resource type="Texture2D" uid="uid://l48dqj7qc16x" path="res://players/player1/img/cooler_muerte3.png" id="17_4mh7x"]
 [ext_resource type="Texture2D" uid="uid://cuh44w4y6xmv1" path="res://players/player1/img/cooler_punetazo3.png" id="17_nkv1e"]
+[ext_resource type="Texture2D" uid="uid://cv6aip5d5j61l" path="res://players/player1/img/cooler_muerte4.png" id="18_5tqt4"]
 [ext_resource type="Texture2D" uid="uid://dgr4v6abt84kk" path="res://players/player1/img/cooler_punetazo4.png" id="18_jq6q4"]
 [ext_resource type="Texture2D" uid="uid://f3s4cqqsevsc" path="res://players/player1/img/cooler_punetazo5.png" id="19_oxp6o"]
 [ext_resource type="Texture2D" uid="uid://dksudv5fwcl2h" path="res://players/player1/img/cooler_punetazo6.png" id="20_ox8no"]
@@ -81,6 +85,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"movimiento",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ox8no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ogxfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4mh7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5tqt4")
+}],
+"loop": false,
+"name": &"muerte",
 "speed": 6.0
 }, {
 "frames": [{
@@ -149,9 +170,7 @@ script = ExtResource("1_shu0p")
 position = Vector2(-1, 3)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_g5ypu")
-animation = &"punetazo"
-frame = 5
-frame_progress = 1.0
+animation = &"muerte"
 
 [node name="col_player1" type="CollisionShape2D" parent="." unique_id=1617499870]
 position = Vector2(1.5, 8.5)
