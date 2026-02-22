@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bf40qe1vcrooh" path="res://UI/img/menu.jpg" id="1_1xyc7"]
 [ext_resource type="Script" uid="uid://bj8mp4iu2w088" path="res://UI/menu/menu.gd" id="1_qlbuq"]
+[ext_resource type="AudioStream" uid="uid://1hjoqq3jbvyf" path="res://UI/intro.mp3" id="3_2gq1s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlbuq"]
 bg_color = Color(0.77418435, 0.4214158, 0, 1)
@@ -48,6 +49,12 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_2gq1s")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rxpqy")
 text = "Salir"
+
+[node name="Intro" type="AudioStreamPlayer" parent="." unique_id=966795898]
+stream = ExtResource("3_2gq1s")
+volume_db = -29.159
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="sprite_menu/HBoxContainer/btn_start" to="." method="_on_btn_start_pressed"]
 [connection signal="pressed" from="sprite_menu/HBoxContainer/btn_exit" to="." method="_on_btn_exit_pressed"]
