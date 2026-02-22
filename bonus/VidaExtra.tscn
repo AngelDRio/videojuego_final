@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blqtduyrp76nm"]
+
+[ext_resource type="Script" uid="uid://dm5au1b4ukqdq" path="res://bonus/vida_extra.gd" id="1_pxmv4"]
+[ext_resource type="Texture2D" uid="uid://cme1nbasf5upy" path="res://bonus/img/esfera_dragon.png" id="1_qqccq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxmv4"]
+radius = 80.399
+
+[node name="vidaExtra" type="Area2D" unique_id=2103380540]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_pxmv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=675327479]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_qqccq")
+
+[node name="col_vida" type="CollisionShape2D" parent="." unique_id=935347198]
+shape = SubResource("CircleShape2D_pxmv4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

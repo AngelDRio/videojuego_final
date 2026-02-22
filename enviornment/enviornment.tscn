@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dwhnxh122jddc" path="res://players/player1/player1.tscn" id="5_ao2iw"]
 [ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://UI/icono.tscn" id="5_fr7t7"]
 [ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="6_i1dae"]
-[ext_resource type="Script" path="res://players/player2/player_2.gd" id="7_fr7t7"]
+[ext_resource type="Script" uid="uid://cacytelgfbiyu" path="res://players/player2/player_2.gd" id="7_fr7t7"]
 
 [node name="Enviornment" type="Node2D" unique_id=2019198059]
 script = ExtResource("1_auy4o")
+metadata/_edit_vertical_guides_ = [1148.0]
 
 [node name="Fondo" parent="." unique_id=1505351154 instance=ExtResource("1_7rt4j")]
 
@@ -29,8 +30,15 @@ flip_h = true
 [node name="Icono" parent="CanvasLayer" unique_id=1722532996 instance=ExtResource("5_fr7t7")]
 
 [node name="Player1" parent="." unique_id=503832253 instance=ExtResource("5_ao2iw")]
-position = Vector2(242, 538)
+position = Vector2(208, 558)
 
 [node name="Player2" parent="." unique_id=1990140121 instance=ExtResource("6_i1dae")]
-position = Vector2(891, 522)
+position = Vector2(906, 556)
 script = ExtResource("7_fr7t7")
+
+[node name="Timer" type="Timer" parent="." unique_id=1134857787]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[node name="vida" type="Node2D" parent="." unique_id=1384667081]

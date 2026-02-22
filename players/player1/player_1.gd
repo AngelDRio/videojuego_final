@@ -30,6 +30,7 @@ func _ready():
 	#CAMBIAR HITBOX DE LADO
 	hitbox_offset_x = hitbox.position.x
 
+
 func _physics_process(delta):
 	var input_axis = Input.get_axis("cooler_izquierda", "cooler_derecha")
 
