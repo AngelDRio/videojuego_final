@@ -38,6 +38,8 @@ func _ready():
 	
 	ani_player.frame_changed.connect(_on_frame_changed)
 	hitbox_offset_x = hitbox.position.x
+	
+	ani_player.animation_finished.connect(_on_animation_finished)
 
 func _physics_process(delta):
 	if muerto:
@@ -189,3 +191,8 @@ func handle_invencible(delta):
 func _on_hitbox_player_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador1") and body.has_method("recibir_golpe"):
 		body.recibir_golpe(1, global_position)
+		
+func _on_animation_finished():
+	if ani_player.animation == "punetazo":
+		atacando = false
+		hitbox.monitoring = false
