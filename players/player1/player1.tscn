@@ -171,9 +171,7 @@ script = ExtResource("1_shu0p")
 position = Vector2(-1, 3)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_g5ypu")
-animation = &"entrada"
-frame = 5
-frame_progress = 1.0
+animation = &"muerte"
 
 [node name="col_player1" type="CollisionShape2D" parent="." unique_id=1617499870]
 position = Vector2(1.5, 8.5)

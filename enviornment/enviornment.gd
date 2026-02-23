@@ -3,16 +3,23 @@ extends Node2D
 var vida_extr_escena = preload("res://bonus/VidaExtra.tscn")
 @onready var temporizdor = $Timer
 @onready var interfaz = $CapaInterfaz
-@onready var knockout = $CanvasLayer/Knockout
+@onready var knockout = $KnockoutInterfaz/Knockout
 
 func mostrar_knockout():
-	knockout.show()   # Mostramos cuando alguien muera
-	get_tree().paused = true
-
+	knockout.show()
+	knockout.scale = Vector2(0.1, 0.1)
+	
+	# Tween para crecer
+	var tween = create_tween()
+	tween.tween_property(knockout, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var ko_sonido = $"KnockoutInterfaz/KO_Sound"
+	if not ko_sonido.playing:
+		ko_sonido.play()
 func _ready() -> void:
 	if interfaz == null: return
 	if knockout:
 		knockout.hide()
+		knockout.scale = Vector2(0.1, 0.1)
 
 
 	if has_node("Player1"):

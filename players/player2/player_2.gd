@@ -178,19 +178,15 @@ func morir():
 	set_collision_layer_value(2, false)
 	hitbox.set_deferred("monitoring", false)
 
-	# Mostrar KO en la escena principal (Environment)
-	get_tree().current_scene.mostrar_knockout()
-
 	if ani_player.sprite_frames.has_animation("muerte"):
 		ani_player.play("muerte")
 
 		# Esperar a que termine la animación de muerte
 		await ani_player.animation_finished
-
+		get_tree().current_scene.mostrar_knockout()
 		# Esperar 4 segundos antes de eliminar el jugador
 		var timer = get_tree().create_timer(4.0, true)  # true = ignora pausa
 		await timer.timeout
-
 		if is_inside_tree():
 			queue_free()
 	else:

@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://UI/icono.tscn" id="5_fr7t7"]
 [ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="6_i1dae"]
 [ext_resource type="AudioStream" uid="uid://dkaa6ucnvckto" path="res://enviornment/pelea.mp3" id="8_fr7t7"]
-[ext_resource type="Texture2D" uid="uid://bpf7qhm78odpc" path="res://UI/img/Knockout.png" id="10_08y5s"]
+[ext_resource type="Texture2D" uid="uid://bpf7qhm78odpc" path="res://UI/Knockout/Knockout.png" id="10_08y5s"]
+[ext_resource type="AudioStream" uid="uid://xfac6u2ikm5d" path="res://UI/Knockout/k-o-sound-effect.mp3" id="11_8lej4"]
 
 [node name="Enviornment" type="Node2D" unique_id=2019198059]
 script = ExtResource("1_auy4o")
@@ -49,9 +50,13 @@ volume_db = -20.411
 autoplay = true
 parameters/looping = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1862951807]
+[node name="KnockoutInterfaz" type="CanvasLayer" parent="." unique_id=1862951807]
 
-[node name="Knockout" type="TextureRect" parent="CanvasLayer" unique_id=109193517]
+[node name="Knockout" type="TextureRect" parent="KnockoutInterfaz" unique_id=109193517]
 offset_right = 40.0
 offset_bottom = 40.0
+localize_numeral_system = false
 texture = ExtResource("10_08y5s")
+
+[node name="KO_Sound" type="AudioStreamPlayer2D" parent="KnockoutInterfaz" unique_id=1535196386]
+stream = ExtResource("11_8lej4")
