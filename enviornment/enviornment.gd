@@ -5,22 +5,11 @@ var vida_extr_escena = preload("res://bonus/VidaExtra.tscn")
 @onready var interfaz = $CapaInterfaz
 @onready var knockout = $KnockoutInterfaz/Knockout
 
-func mostrar_knockout():
-	knockout.show()
-	knockout.scale = Vector2(0.1, 0.1)
-	
-	# Tween para crecer
-	var tween = create_tween()
-	tween.tween_property(knockout, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	var ko_sonido = $"KnockoutInterfaz/KO_Sound"
-	if not ko_sonido.playing:
-		ko_sonido.play()
 func _ready() -> void:
 	if interfaz == null: return
 	if knockout:
 		knockout.hide()
 		knockout.scale = Vector2(0.1, 0.1)
-
 
 	if has_node("Player1"):
 		var p1 = $Player1
@@ -33,6 +22,19 @@ func _ready() -> void:
 		interfaz.actualizar_barra_p2(p2.vida_actual)
 		
 	temporizdor.timeout.connect(aparecer_bola)
+
+func mostrar_knockout():
+	knockout.show()
+	knockout.scale = Vector2(0.1, 0.1)
+	
+	# Tween para crecer
+	var tween = create_tween()
+	tween.tween_property(knockout, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var ko_sonido = $"KnockoutInterfaz/KO_Sound"
+	if not ko_sonido.playing:
+		ko_sonido.play()
+		await ko_sonido.finished
+		get_tree().change_scene_to_file("res://UI/menu/menu.tscn")
 
 func aparecer_bola():
 	if get_tree().get_nodes_in_group("bolas_vida").size() < 1:

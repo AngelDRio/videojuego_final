@@ -48,6 +48,7 @@ func _physics_process(delta):
 	if entrando: 
 		move_and_slide()
 		return
+		
 	if muerto:
 		apply_gravity(delta)
 		move_and_slide()
@@ -178,19 +179,17 @@ func morir():
 	set_collision_layer_value(2, false)
 	hitbox.set_deferred("monitoring", false)
 
-
 	if ani_player.sprite_frames.has_animation("muerte"):
 		ani_player.play("muerte")
-		# Esperar a que termine la animación de muerte
+
 		await ani_player.animation_finished
 		get_tree().current_scene.mostrar_knockout()
-		# Liberar el jugador después de 4 segundos
-		var timer = get_tree().create_timer(4.0, true) # true = ignora pausa
+
+		var timer = get_tree().create_timer(0.3, true)
 		await timer.timeout
 		if is_inside_tree():
 			queue_free()
 	else:
-		# Si no hay animación de muerte, simplemente eliminar después de 4 segundos
 		var timer = get_tree().create_timer(4.0, true)
 		await timer.timeout
 		if is_inside_tree():
