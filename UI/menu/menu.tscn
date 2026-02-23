@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cm0px061526qk"]
 
-[ext_resource type="Texture2D" uid="uid://bf40qe1vcrooh" path="res://UI/img/menu.jpg" id="1_1xyc7"]
-[ext_resource type="Script" uid="uid://bj8mp4iu2w088" path="res://UI/menu/menu.gd" id="1_qlbuq"]
-[ext_resource type="AudioStream" uid="uid://1hjoqq3jbvyf" path="res://UI/intro.mp3" id="3_2gq1s"]
-[ext_resource type="FontFile" uid="uid://c3e8wyu8fd00l" path="res://UI/menu/font/Saiyan-Sans.ttf" id="4_rxpqy"]
+[ext_resource type="Texture2D" uid="uid://bf40qe1vcrooh" path="res://ui/img/menu.jpg" id="1_1xyc7"]
+[ext_resource type="Script" uid="uid://bj8mp4iu2w088" path="res://ui/menu/menu.gd" id="1_qlbuq"]
+[ext_resource type="AudioStream" uid="uid://1hjoqq3jbvyf" path="res://ui/menu/intro.mp3" id="3_2gq1s"]
+[ext_resource type="FontFile" uid="uid://c3e8wyu8fd00l" path="res://ui/menu/font/Saiyan-Sans.ttf" id="4_rxpqy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlbuq"]
 bg_color = Color(0.77418435, 0.4214158, 0, 1)
@@ -19,10 +19,13 @@ bg_color = Color(0.6, 0.27450982, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_oo15n"]
 font = ExtResource("4_rxpqy")
-font_size = 100
+font_size = 125
 font_color = Color(1, 0.4, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
 
-[node name="Menu" type="Control" unique_id=442214115]
+[node name="menu" type="Control" unique_id=442214115]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,20 +39,20 @@ position = Vector2(575.25006, 325.5)
 scale = Vector2(0.71843755, 0.72111106)
 texture = ExtResource("1_1xyc7")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="sprite_menu" unique_id=1774228273]
+[node name="hbox_botones" type="VBoxContainer" parent="sprite_menu" unique_id=1774228273]
 offset_left = 241.84418
 offset_top = 254.46843
 offset_right = 766.59406
 offset_bottom = 396.46844
 
-[node name="btn_start" type="Button" parent="sprite_menu/HBoxContainer" unique_id=1444031765]
+[node name="btn_start" type="Button" parent="sprite_menu/hbox_botones" unique_id=1444031765]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_qlbuq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1xyc7")
 text = "Jugar"
 
-[node name="btn_exit" type="Button" parent="sprite_menu/HBoxContainer" unique_id=1688835156]
+[node name="btn_exit" type="Button" parent="sprite_menu/hbox_botones" unique_id=1688835156]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_2gq1s")
@@ -62,14 +65,14 @@ volume_db = -29.159
 autoplay = true
 parameters/looping = true
 
-[node name="Label" type="Label" parent="." unique_id=988979245]
+[node name="lbl_titulo" type="Label" parent="." unique_id=988979245]
 layout_mode = 0
-offset_left = 369.0
-offset_top = 6.0
-offset_right = 809.0
-offset_bottom = 106.0
+offset_left = 297.0
+offset_top = 17.0
+offset_right = 846.0
+offset_bottom = 143.0
 text = "Bola de Drac"
 label_settings = SubResource("LabelSettings_oo15n")
 
-[connection signal="pressed" from="sprite_menu/HBoxContainer/btn_start" to="." method="_on_btn_start_pressed"]
-[connection signal="pressed" from="sprite_menu/HBoxContainer/btn_exit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="sprite_menu/hbox_botones/btn_start" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="sprite_menu/hbox_botones/btn_exit" to="." method="_on_btn_exit_pressed"]

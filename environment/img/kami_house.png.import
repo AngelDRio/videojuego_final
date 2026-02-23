@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjcw0b2d1mkdh"
-path="res://.godot/imported/kami_house.png-53d980028196802dc7fe67fcd2e1dbef.ctex"
+path="res://.godot/imported/kami_house.png-49e049b2370dca22667594a9a52bf19c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enviornment/img/kami_house.png"
-dest_files=["res://.godot/imported/kami_house.png-53d980028196802dc7fe67fcd2e1dbef.ctex"]
+source_file="res://environment/img/kami_house.png"
+dest_files=["res://.godot/imported/kami_house.png-49e049b2370dca22667594a9a52bf19c.ctex"]
 
 [params]
 

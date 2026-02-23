@@ -55,7 +55,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"entrada",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -171,7 +171,7 @@ script = ExtResource("1_shu0p")
 position = Vector2(-1, 3)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_g5ypu")
-animation = &"muerte"
+animation = &"entrada"
 
 [node name="col_player1" type="CollisionShape2D" parent="." unique_id=1617499870]
 position = Vector2(1.5, 8.5)
