@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://ddrpxinc4ljm4"]
+
+[ext_resource type="Texture2D" uid="uid://de70hc2l3cs7v" path="res://UI/img/fondo_azul_cielo.jpg" id="1_ft60r"]
+[ext_resource type="Script" uid="uid://6nve18s2ycfy" path="res://UI/menuControles/menu_controles.gd" id="1_h2h8x"]
+[ext_resource type="FontFile" uid="uid://c3e8wyu8fd00l" path="res://UI/menu/font/Saiyan-Sans.ttf" id="2_n2wb1"]
+[ext_resource type="Texture2D" uid="uid://do8332v5fj288" path="res://UI/img/goku_idle1.png" id="3_184l1"]
+[ext_resource type="Texture2D" uid="uid://bou68tkd7ioiq" path="res://UI/img/cooler_idle1.png" id="4_7816g"]
+[ext_resource type="Texture2D" uid="uid://c7rfciu3cbgr1" path="res://UI/img/asset_flecha_derecha.png" id="5_3cnvu"]
+[ext_resource type="Texture2D" uid="uid://cynrhcmg2kc1y" path="res://UI/img/asset_flecha_izquierda.png" id="6_o1w75"]
+[ext_resource type="Texture2D" uid="uid://ckpi0ytj2av55" path="res://UI/img/asset_flecha_arriba.png" id="8_h2h8x"]
+[ext_resource type="Texture2D" uid="uid://c4fe50824obtw" path="res://UI/img/asset_w.png" id="9_wroul"]
+[ext_resource type="Texture2D" uid="uid://b6dtgyhkkcyni" path="res://UI/img/asset_a.png" id="10_ak4tr"]
+[ext_resource type="Texture2D" uid="uid://r6jbmgrrknix" path="res://UI/img/asset_d.png" id="12_kyor6"]
+[ext_resource type="Texture2D" uid="uid://c51sln2w1vvvx" path="res://UI/img/asset_e.png" id="13_h2h8x"]
+[ext_resource type="Texture2D" uid="uid://c0so88kmbmi64" path="res://UI/img/esfera_dragon.png" id="13_o1w75"]
+[ext_resource type="Texture2D" uid="uid://dh82vtj153ryg" path="res://UI/img/asset_..png" id="14_wroul"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5g721"]
+bg_color = Color(1, 0.4, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qayc8"]
+bg_color = Color(0.601483, 0.27476227, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_smwat"]
+font = ExtResource("2_n2wb1")
+font_size = 100
+font_color = Color(1, 0.4, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 16
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cnvu"]
+font = ExtResource("2_n2wb1")
+font_size = 50
+font_color = Color(1, 0.4, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o1w75"]
+font = ExtResource("2_n2wb1")
+font_size = 50
+font_color = Color(1, 0.4, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="menu_controles" type="Control" unique_id=242823339]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2h8x")
+
+[node name="sprite_menu_controles" type="Sprite2D" parent="." unique_id=1792840143]
+position = Vector2(559, 382)
+scale = Vector2(1, 0.997)
+texture = ExtResource("1_ft60r")
+
+[node name="hbox_boton_volver" type="VBoxContainer" parent="sprite_menu_controles" unique_id=1297642985]
+offset_left = -113.00001
+offset_top = 197.59276
+offset_right = 144.0
+offset_bottom = 275.82742
+
+[node name="btn_volver" type="Button" parent="sprite_menu_controles/hbox_boton_volver" unique_id=1460466570]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_n2wb1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5g721")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qayc8")
+text = "Volver
+"
+
+[node name="lbl_titulo" type="Label" parent="." unique_id=1595373499]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 17.0
+offset_right = 790.0
+offset_bottom = 117.0
+text = "CONTROLES"
+label_settings = SubResource("LabelSettings_smwat")
+
+[node name="sprite_goku" type="Sprite2D" parent="." unique_id=1834926990]
+position = Vector2(964, 110.00001)
+scale = Vector2(3.5, 3.522)
+texture = ExtResource("3_184l1")
+flip_h = true
+
+[node name="sprite_cooler" type="Sprite2D" parent="." unique_id=1627818129]
+position = Vector2(180, 115)
+scale = Vector2(3.5, 3.218)
+texture = ExtResource("4_7816g")
+
+[node name="sprite_derecha" type="Sprite2D" parent="." unique_id=1947838989]
+position = Vector2(273, 411)
+texture = ExtResource("5_3cnvu")
+
+[node name="sprite_izquierda" type="Sprite2D" parent="." unique_id=476925505]
+position = Vector2(113, 411)
+texture = ExtResource("6_o1w75")
+
+[node name="sprite_arriba" type="Sprite2D" parent="." unique_id=1773231710]
+position = Vector2(193, 338)
+texture = ExtResource("8_h2h8x")
+
+[node name="sprite_w" type="Sprite2D" parent="." unique_id=944948592]
+position = Vector2(962, 334)
+texture = ExtResource("9_wroul")
+
+[node name="sprite_a" type="Sprite2D" parent="." unique_id=1412684628]
+position = Vector2(881, 410)
+texture = ExtResource("10_ak4tr")
+
+[node name="sprite_d" type="Sprite2D" parent="." unique_id=576684498]
+position = Vector2(1043, 410)
+texture = ExtResource("12_kyor6")
+
+[node name="sprite_e" type="Sprite2D" parent="." unique_id=521686683]
+position = Vector2(192, 573)
+texture = ExtResource("13_h2h8x")
+
+[node name="sprite_punto" type="Sprite2D" parent="." unique_id=764102990]
+position = Vector2(968, 570)
+texture = ExtResource("14_wroul")
+
+[node name="lbl_movimiento" type="Label" parent="." unique_id=1230235301]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 239.0
+offset_right = 299.0
+offset_bottom = 300.0
+text = "Movimiento"
+label_settings = SubResource("LabelSettings_3cnvu")
+
+[node name="lbl_ataque" type="Label" parent="." unique_id=1857932383]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 485.0
+offset_right = 275.0
+offset_bottom = 546.0
+text = "Ataque"
+label_settings = SubResource("LabelSettings_3cnvu")
+
+[node name="lbl_movimiento2" type="Label" parent="." unique_id=763928648]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 479.0
+offset_right = 1045.0
+offset_bottom = 533.0
+text = "Ataque"
+label_settings = SubResource("LabelSettings_o1w75")
+
+[node name="lbl_movimiento3" type="Label" parent="." unique_id=1894381246]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 245.0
+offset_right = 1074.0
+offset_bottom = 298.0
+text = "Movimiento"
+label_settings = SubResource("LabelSettings_o1w75")
+
+[node name="sprite_esfera" type="Sprite2D" parent="." unique_id=1836076047]
+position = Vector2(575, 329)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_o1w75")
+
+[connection signal="pressed" from="sprite_menu_controles/hbox_boton_volver/btn_volver" to="." method="_on_btn_volver_pressed"]

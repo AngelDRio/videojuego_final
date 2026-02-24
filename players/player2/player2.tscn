@@ -266,13 +266,13 @@ script = ExtResource("1_7to51")
 [node name="ani_player2" type="AnimatedSprite2D" parent="." unique_id=1695235352]
 scale = Vector2(1.35, 1.35)
 sprite_frames = SubResource("SpriteFrames_yvelj")
-animation = &"entrada"
-frame = 8
+animation = &"punetazo"
+frame = 5
 frame_progress = 1.0
 flip_h = true
 
 [node name="col_player2" type="CollisionShape2D" parent="." unique_id=1187909019]
-position = Vector2(6.5, 4)
+position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_t6mul")
 
 [node name="hitbox_player2" type="Area2D" parent="." unique_id=1688707932]

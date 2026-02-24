@@ -7,3 +7,6 @@ func _on_btn_start_pressed():
 
 func _on_btn_exit_pressed() -> void:
 	get_tree().quit()
+	
+func _on_btn_controles_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/menuControles/menuControles.tscn")

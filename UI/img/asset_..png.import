@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5ncmkiys3d0"
-path="res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"
+uid="uid://dh82vtj153ryg"
+path="res://.godot/imported/asset_..png-aaf7eb957fb9019ec93eeb61ff5e5ce2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/barra de vida.png"
-dest_files=["res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"]
+source_file="res://UI/img/asset_..png"
+dest_files=["res://.godot/imported/asset_..png-aaf7eb957fb9019ec93eeb61ff5e5ce2.ctex"]
 
 [params]
 

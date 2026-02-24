@@ -33,7 +33,8 @@ func mostrar_knockout():
 	var ko_sonido = $"KnockoutInterfaz/KO_Sound"
 	if not ko_sonido.playing:
 		ko_sonido.play()
-		await ko_sonido.finished
+		var timer = get_tree().create_timer(3.7, true)
+		await timer.timeout
 		get_tree().change_scene_to_file("res://UI/menu/menu.tscn")
 
 func aparecer_bola():

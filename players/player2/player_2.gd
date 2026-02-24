@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @export var gravity_scale = 2
 @export var speed = 500
-@export var acceleration = 600
-@export var friction = 1500
+@export var acceleration = 1800
+@export var friction = 5000
 @export var jump_force = -700
 @export var air_acceleration = 2000
 @export var air_friction = 150
@@ -22,7 +22,7 @@ var estuneado = false
 var invencible = false
 
 @export var tiempo_stun = 0.5
-@export var tiempo_invencible = 1.0
+@export var tiempo_invencible = 0.5
 var stun_timer = 0.0
 var invencible_timer = 0.0
 
@@ -45,49 +45,81 @@ func _ready():
 	ani_player.play("entrada")
 	
 func _physics_process(delta):
-	if entrando: 
-		move_and_slide()
+	if entrando:
+		estado_entrando()
 		return
-
+		
 	if muerto:
-		apply_gravity(delta)
-		move_and_slide()
+		estado_muerto(delta)
 		return
 	
 	handle_invencible(delta)
 	
 	if estuneado:
-		stun_timer -= delta
-		apply_gravity(delta)
-		move_and_slide()
-		ani_player.play("recibir")
-		if stun_timer <= 0:
-			estuneado = false
+		estado_estuneado(delta)
 		return
 
-	var input_axis = Input.get_axis("goku_izquierda", "goku_derecha")
+	var input_axis = obtener_input()
 
-	if Input.is_action_just_pressed("goku_punetazo") and not atacando:
-		atacando = true
-		if is_on_floor():
-			velocity.x = 0
-		ani_player.play("punetazo")
+	procesar_ataque()
 
 	apply_gravity(delta)
 
 	if not atacando:
-		handle_acceleration(input_axis, delta)
-		apply_friction(input_axis, delta)
-		handle_jump()
-		handle_air_acceleration(input_axis, delta)
-		update_animation(input_axis)
+		mover_normal(input_axis, delta)
 	else:
-		if is_on_floor():
-			velocity.x = move_toward(velocity.x, 0, friction * delta)
-		else:
-			handle_air_acceleration(input_axis, delta)
+		mover_atacando(input_axis, delta)
 
 	move_and_slide()
+
+func estado_entrando():
+	move_and_slide()
+
+func estado_muerto(delta):
+	apply_gravity(delta)
+	move_and_slide()
+	
+func handle_invencible(delta):
+	if invencible:
+		invencible_timer -= delta
+		modulate.a = 0.5
+		if invencible_timer <= 0:
+			invencible = false
+			modulate.a = 1.0
+
+func estado_estuneado(delta):
+	stun_timer -= delta
+	apply_gravity(delta)
+	move_and_slide()
+	ani_player.play("recibir")
+	
+	if stun_timer <= 0:
+		estuneado = false
+
+func obtener_input():
+	return Input.get_axis("goku_izquierda", "goku_derecha")
+
+func procesar_ataque():
+	if Input.is_action_just_pressed("goku_punetazo") and not atacando:
+		atacando = true
+		
+		if is_on_floor():
+			velocity.x = 0
+			
+		ani_player.play("punetazo")
+
+func mover_normal(input_axis, delta):
+	handle_acceleration(input_axis, delta)
+	apply_friction(input_axis, delta)
+	handle_jump()
+	handle_air_acceleration(input_axis, delta)
+	update_animation(input_axis)
+
+func mover_atacando(input_axis, delta):
+	if is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+	else:
+		handle_air_acceleration(input_axis, delta)
 
 func update_animation(input_axis):
 	if muerto: return
@@ -144,7 +176,7 @@ func recibir_golpe(danio, posicion_enemigo):
 		return
 		
 	var direccion = 1 if global_position.x > posicion_enemigo.x else -1
-	velocity = Vector2(direccion * 200, -150)
+	velocity = Vector2(direccion * 80, -100)
 	
 	quitar_vida(danio)
 	
@@ -194,14 +226,6 @@ func morir():
 		await timer.timeout
 		if is_inside_tree():
 			queue_free()
-
-func handle_invencible(delta):
-	if invencible:
-		invencible_timer -= delta
-		modulate.a = 0.5
-		if invencible_timer <= 0:
-			invencible = false
-			modulate.a = 1.0
 
 func _on_hitbox_player_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador1") and body.has_method("recibir_golpe"):

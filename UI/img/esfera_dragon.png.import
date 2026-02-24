@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5ncmkiys3d0"
-path="res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"
+uid="uid://c0so88kmbmi64"
+path="res://.godot/imported/esfera_dragon.png-617019b286c7735d1a1d42b96608b944.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/barra de vida.png"
-dest_files=["res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"]
+source_file="res://UI/img/esfera_dragon.png"
+dest_files=["res://.godot/imported/esfera_dragon.png-617019b286c7735d1a1d42b96608b944.ctex"]
 
 [params]
 

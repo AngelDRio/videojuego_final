@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5ncmkiys3d0"
-path="res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"
+uid="uid://clha5usawop2f"
+path="res://.godot/imported/keyboard assets.png-aa6bfd96a2ceb9d22f7cfe415e642673.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/barra de vida.png"
-dest_files=["res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"]
+source_file="res://UI/img/keyboard assets.png"
+dest_files=["res://.godot/imported/keyboard assets.png-aa6bfd96a2ceb9d22f7cfe415e642673.ctex"]
 
 [params]
 

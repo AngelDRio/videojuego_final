@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5ncmkiys3d0"
-path="res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"
+uid="uid://de70hc2l3cs7v"
+path="res://.godot/imported/fondo_azul_cielo.jpg-2ced0c99d83a41bb59cc4dd1973b1fce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/barra de vida.png"
-dest_files=["res://.godot/imported/barra de vida.png-602d5529197dd865e98d2e10735df9b2.ctex"]
+source_file="res://UI/img/fondo_azul_cielo.jpg"
+dest_files=["res://.godot/imported/fondo_azul_cielo.jpg-2ced0c99d83a41bb59cc4dd1973b1fce.ctex"]
 
 [params]
 

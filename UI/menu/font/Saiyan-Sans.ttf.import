@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c3e8wyu8fd00l"
-path="res://.godot/imported/Saiyan-Sans.ttf-53f77d4cf595a3b5b091ba32cd459010.fontdata"
+path="res://.godot/imported/Saiyan-Sans.ttf-730d4d6afaa6c934e4828be972e5aa3f.fontdata"
 
 [deps]
 
-source_file="res://ui/menu/font/Saiyan-Sans.ttf"
-dest_files=["res://.godot/imported/Saiyan-Sans.ttf-53f77d4cf595a3b5b091ba32cd459010.fontdata"]
+source_file="res://UI/menu/font/Saiyan-Sans.ttf"
+dest_files=["res://.godot/imported/Saiyan-Sans.ttf-730d4d6afaa6c934e4828be972e5aa3f.fontdata"]
 
 [params]
 
