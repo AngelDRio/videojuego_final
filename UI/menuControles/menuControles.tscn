@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ddrpxinc4ljm4"]
 
-[ext_resource type="Texture2D" uid="uid://de70hc2l3cs7v" path="res://UI/img/fondo_azul_cielo.jpg" id="1_ft60r"]
-[ext_resource type="Script" uid="uid://6nve18s2ycfy" path="res://UI/menuControles/menu_controles.gd" id="1_h2h8x"]
-[ext_resource type="FontFile" uid="uid://c3e8wyu8fd00l" path="res://UI/menu/font/Saiyan-Sans.ttf" id="2_n2wb1"]
-[ext_resource type="Texture2D" uid="uid://do8332v5fj288" path="res://UI/img/goku_idle1.png" id="3_184l1"]
-[ext_resource type="Texture2D" uid="uid://bou68tkd7ioiq" path="res://UI/img/cooler_idle1.png" id="4_7816g"]
-[ext_resource type="Texture2D" uid="uid://c7rfciu3cbgr1" path="res://UI/img/asset_flecha_derecha.png" id="5_3cnvu"]
-[ext_resource type="Texture2D" uid="uid://cynrhcmg2kc1y" path="res://UI/img/asset_flecha_izquierda.png" id="6_o1w75"]
-[ext_resource type="Texture2D" uid="uid://ckpi0ytj2av55" path="res://UI/img/asset_flecha_arriba.png" id="8_h2h8x"]
-[ext_resource type="Texture2D" uid="uid://c4fe50824obtw" path="res://UI/img/asset_w.png" id="9_wroul"]
-[ext_resource type="Texture2D" uid="uid://b6dtgyhkkcyni" path="res://UI/img/asset_a.png" id="10_ak4tr"]
-[ext_resource type="Texture2D" uid="uid://r6jbmgrrknix" path="res://UI/img/asset_d.png" id="12_kyor6"]
-[ext_resource type="Texture2D" uid="uid://c51sln2w1vvvx" path="res://UI/img/asset_e.png" id="13_h2h8x"]
-[ext_resource type="Texture2D" uid="uid://c0so88kmbmi64" path="res://UI/img/esfera_dragon.png" id="13_o1w75"]
-[ext_resource type="Texture2D" uid="uid://dh82vtj153ryg" path="res://UI/img/asset_..png" id="14_wroul"]
+[ext_resource type="Texture2D" uid="uid://de70hc2l3cs7v" path="res://ui/img/fondo_azul_cielo.jpg" id="1_ft60r"]
+[ext_resource type="Script" uid="uid://6nve18s2ycfy" path="res://ui/menuControles/menu_controles.gd" id="1_h2h8x"]
+[ext_resource type="FontFile" uid="uid://c3e8wyu8fd00l" path="res://ui/menu/font/Saiyan-Sans.ttf" id="2_n2wb1"]
+[ext_resource type="Texture2D" uid="uid://do8332v5fj288" path="res://ui/img/goku_idle1.png" id="3_184l1"]
+[ext_resource type="Texture2D" uid="uid://bou68tkd7ioiq" path="res://ui/img/cooler_idle1.png" id="4_7816g"]
+[ext_resource type="Texture2D" uid="uid://c7rfciu3cbgr1" path="res://ui/img/asset_flecha_derecha.png" id="5_3cnvu"]
+[ext_resource type="Texture2D" uid="uid://cynrhcmg2kc1y" path="res://ui/img/asset_flecha_izquierda.png" id="6_o1w75"]
+[ext_resource type="Texture2D" uid="uid://ckpi0ytj2av55" path="res://ui/img/asset_flecha_arriba.png" id="8_h2h8x"]
+[ext_resource type="Texture2D" uid="uid://c4fe50824obtw" path="res://ui/img/asset_w.png" id="9_wroul"]
+[ext_resource type="Texture2D" uid="uid://b6dtgyhkkcyni" path="res://ui/img/asset_a.png" id="10_ak4tr"]
+[ext_resource type="Texture2D" uid="uid://r6jbmgrrknix" path="res://ui/img/asset_d.png" id="12_kyor6"]
+[ext_resource type="Texture2D" uid="uid://c51sln2w1vvvx" path="res://ui/img/asset_e.png" id="13_h2h8x"]
+[ext_resource type="Texture2D" uid="uid://c0so88kmbmi64" path="res://ui/img/esfera_dragon.png" id="13_o1w75"]
+[ext_resource type="Texture2D" uid="uid://dh82vtj153ryg" path="res://ui/img/asset_..png" id="14_wroul"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5g721"]
 bg_color = Color(1, 0.4, 0, 1)
@@ -160,6 +160,15 @@ offset_top = 485.0
 offset_right = 275.0
 offset_bottom = 546.0
 text = "Ataque"
+label_settings = SubResource("LabelSettings_3cnvu")
+
+[node name="lbl_vida" type="Label" parent="." unique_id=1055105625]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 427.0
+offset_right = 671.0
+offset_bottom = 488.0
+text = "Vida extra"
 label_settings = SubResource("LabelSettings_3cnvu")
 
 [node name="lbl_movimiento2" type="Label" parent="." unique_id=763928648]
