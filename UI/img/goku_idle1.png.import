@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do8332v5fj288"
-path="res://.godot/imported/goku_idle1.png-b9578e91dce3fe60752e8662485f70e7.ctex"
+path="res://.godot/imported/goku_idle1.png-a85597b88702f94a755dfc8f27cf5ab4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/goku_idle1.png"
-dest_files=["res://.godot/imported/goku_idle1.png-b9578e91dce3fe60752e8662485f70e7.ctex"]
+source_file="res://ui/img/goku_idle1.png"
+dest_files=["res://.godot/imported/goku_idle1.png-a85597b88702f94a755dfc8f27cf5ab4.ctex"]
 
 [params]
 

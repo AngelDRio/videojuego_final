@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpf7qhm78odpc"
-path="res://.godot/imported/Knockout.png-3501813373146572726c20629a5eaf27.ctex"
+path="res://.godot/imported/Knockout.png-15812c34bf485d98b146dbc04863e2e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Knockout/Knockout.png"
-dest_files=["res://.godot/imported/Knockout.png-3501813373146572726c20629a5eaf27.ctex"]
+source_file="res://ui/knockout/Knockout.png"
+dest_files=["res://.godot/imported/Knockout.png-15812c34bf485d98b146dbc04863e2e1.ctex"]
 
 [params]
 
