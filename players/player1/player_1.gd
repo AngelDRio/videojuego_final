@@ -22,7 +22,7 @@ var estuneado = false
 var invencible = false
 
 @export var tiempo_stun = 0.5
-@export var tiempo_invencible = 0.5
+@export var tiempo_invencible = 0.75
 var stun_timer = 0.0
 var invencible_timer = 0.0
 
