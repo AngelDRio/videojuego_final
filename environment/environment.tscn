@@ -4,14 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://cpr8y06byxak6" path="res://fondo/fondo.tscn" id="2_h6u84"]
 [ext_resource type="PackedScene" uid="uid://cpg87rb07j6bl" path="res://environment/suelo.tscn" id="3_0iorr"]
 [ext_resource type="Script" uid="uid://birykw1ch3al7" path="res://environment/canvas_layer.gd" id="4_gewoo"]
-[ext_resource type="PackedScene" uid="uid://buu0fh2pjn3lv" path="res://ui/barraVida/barraVida.tscn" id="5_nsn85"]
-[ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://ui/iconos/icono.tscn" id="6_ypa7m"]
+[ext_resource type="PackedScene" uid="uid://buu0fh2pjn3lv" path="res://UI/barraVida/barraVida.tscn" id="5_nsn85"]
+[ext_resource type="PackedScene" uid="uid://dkhkw67jjlf31" path="res://UI/iconos/icono.tscn" id="6_ypa7m"]
 [ext_resource type="PackedScene" uid="uid://dwhnxh122jddc" path="res://players/player1/player1.tscn" id="7_a4xkn"]
 [ext_resource type="PackedScene" uid="uid://c27xd3jfptlg7" path="res://players/player2/player2.tscn" id="8_a0onh"]
 [ext_resource type="AudioStream" uid="uid://dkaa6ucnvckto" path="res://environment/pelea.mp3" id="9_23rrj"]
-[ext_resource type="Texture2D" uid="uid://bpf7qhm78odpc" path="res://ui/knockout/Knockout.png" id="10_cs5r8"]
-[ext_resource type="AudioStream" uid="uid://xfac6u2ikm5d" path="res://ui/knockout/k-o-sound-effect.mp3" id="11_vb378"]
+[ext_resource type="Texture2D" uid="uid://bpf7qhm78odpc" path="res://UI/Knockout/Knockout.png" id="10_cs5r8"]
+[ext_resource type="AudioStream" uid="uid://xfac6u2ikm5d" path="res://UI/Knockout/k-o-sound-effect.mp3" id="11_vb378"]
 [ext_resource type="PackedScene" uid="uid://d2w5kaxvs2hm4" path="res://enemigos/enemigo.tscn" id="12_h6u84"]
+[ext_resource type="PackedScene" uid="uid://byj5c5dbqflqe" path="res://enemigo_static/ene_static.tscn" id="13_0iorr"]
 
 [node name="Environment" type="Node2D" unique_id=2019198059]
 script = ExtResource("1_3g2c1")
@@ -67,3 +68,11 @@ stream = ExtResource("11_vb378")
 
 [node name="Enemigo" parent="enemigos" unique_id=789609901 instance=ExtResource("12_h6u84")]
 position = Vector2(367, 344)
+
+[node name="ene_static" type="Node2D" parent="." unique_id=732892522]
+
+[node name="spike" parent="ene_static" unique_id=1480599862 instance=ExtResource("13_0iorr")]
+position = Vector2(1136, 426)
+
+[node name="spike2" parent="ene_static" unique_id=666273903 instance=ExtResource("13_0iorr")]
+position = Vector2(13, 425)
