@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clfc7ng84xrrq"
-path="res://.godot/imported/soldado3.png-522d1fe8dc31311837dbcefd5d31c0f3.ctex"
+uid="uid://de7y60bf5sjkx"
+path="res://.godot/imported/soldado4.png-a74ce7c2fe9b7b3b9d574a854f9d6ee7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemigos/img/soldado3.png"
-dest_files=["res://.godot/imported/soldado3.png-522d1fe8dc31311837dbcefd5d31c0f3.ctex"]
+source_file="res://enemigo_dinam/img/soldado4.png"
+dest_files=["res://.godot/imported/soldado4.png-a74ce7c2fe9b7b3b9d574a854f9d6ee7.ctex"]
 
 [params]
 

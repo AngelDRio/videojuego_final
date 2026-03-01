@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d2w5kaxvs2hm4"]
 
-[ext_resource type="Texture2D" uid="uid://de7y60bf5sjkx" path="res://enemigos/img/soldado4.png" id="1_bvf6m"]
-[ext_resource type="Script" uid="uid://di3tv30rllf5y" path="res://enemigos/enemigo.gd" id="1_dnjyr"]
-[ext_resource type="Texture2D" uid="uid://cxm0rgnurg5dv" path="res://enemigos/img/soldado5.png" id="2_dnjyr"]
+[ext_resource type="Texture2D" uid="uid://de7y60bf5sjkx" path="res://enemigo_dinam/img/soldado4.png" id="1_bvf6m"]
+[ext_resource type="Script" uid="uid://di3tv30rllf5y" path="res://enemigo_dinam/ene_dinam.gd" id="1_dnjyr"]
+[ext_resource type="Texture2D" uid="uid://cxm0rgnurg5dv" path="res://enemigo_dinam/img/soldado5.png" id="2_dnjyr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s4uwk"]
 animations = [{

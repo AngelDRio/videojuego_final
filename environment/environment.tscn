@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dkaa6ucnvckto" path="res://environment/pelea.mp3" id="9_23rrj"]
 [ext_resource type="Texture2D" uid="uid://bpf7qhm78odpc" path="res://UI/Knockout/Knockout.png" id="10_cs5r8"]
 [ext_resource type="AudioStream" uid="uid://xfac6u2ikm5d" path="res://UI/Knockout/k-o-sound-effect.mp3" id="11_vb378"]
-[ext_resource type="PackedScene" uid="uid://d2w5kaxvs2hm4" path="res://enemigos/enemigo.tscn" id="12_h6u84"]
+[ext_resource type="PackedScene" uid="uid://d2w5kaxvs2hm4" path="res://enemigo_dinam/ene_dinam.tscn" id="12_h6u84"]
 [ext_resource type="PackedScene" uid="uid://byj5c5dbqflqe" path="res://enemigo_static/ene_static.tscn" id="13_0iorr"]
 
 [node name="Environment" type="Node2D" unique_id=2019198059]
@@ -64,9 +64,9 @@ texture = ExtResource("10_cs5r8")
 [node name="KO_Sound" type="AudioStreamPlayer2D" parent="KnockoutInterfaz" unique_id=1535196386]
 stream = ExtResource("11_vb378")
 
-[node name="enemigos" type="Node2D" parent="." unique_id=949630097]
+[node name="ene_dinam" type="Node2D" parent="." unique_id=949630097]
 
-[node name="Enemigo" parent="enemigos" unique_id=789609901 instance=ExtResource("12_h6u84")]
+[node name="Enemigo" parent="ene_dinam" unique_id=789609901 instance=ExtResource("12_h6u84")]
 position = Vector2(367, 344)
 
 [node name="ene_static" type="Node2D" parent="." unique_id=732892522]
