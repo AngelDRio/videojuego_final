@@ -8,7 +8,56 @@
 
 ## **1. Conceptualización**
 
+###Idea
+Nuestra idea original para realizar el videojuego fue un juego de lucha 2D, nos dimos cuenta que no había juegos llamativos de lucha con estilo pixelart ambientados en la famosa serie de **Dragon Ball** por lo que nos decantamos por realizarlo basado en esta temática. La saga que más nos conmovió fue **Dragon Ball Z** debido a su historia, como transcurre y su desenlace épico que quedó grabada en nuestras memorias.
 
+###Historia de los personajes
+Nos encontramos en el planeta Namek, Goku consigue su transformación Super Saiyan y derrotar al tirano galáctico Freezer. En lo profundo del espacio, Cooler, hermano mayor de Freezer, recibe la noticia de la muerte de su hermano. Cooler es más frío, calculador y orgulloso que Freezer, considerando que su derrota fue una deshonra para su linaje, decide ir a eliminar al Saiyan que venció a su hermano. El juego recoge las dos posibles resoluciones, dependiendo de los jugadores como transcurriría el futuro de la historia. En el área de batalla encontramos trampas y uno de los secuaces de Cooler, el cual se ha rebelado contra su líder tras darse cuenta del poder de las esferas del dragón e impedirá que cualquiera de los dos personajes se acerque a por ella.
+
+###Arte conceptual
+Queríamos que fuese un juego Pixel Art 2D, ya que es un estilo muy reconocible dentro del mundo de los videojuegos. Este estilo nos permite transmitir una estética clásica inspirada en los títulos arcade de los años 90, donde primaban los reflejos, la precisión y la espectacularidad visual. 
+![Idle](img_Readme/boceto.jpg)
+
+###Lista de verificación
+#### 1. Identidad visual
+
+- [ ] Definir estilo general Pixel Art 2D .
+- [ ] Establecer resolución base del juego.
+- [ ] Mantener coherencia visual entre personajes y escenarios.
+
+#### 2. Diseño de personajes
+
+- [ ] Crear bocetos iniciales de cada luchador.
+- [ ] Definir estilo de combate.
+- [ ] Crear el sprite base.
+- [ ] Diseñar animaciones:
+  - [ ] Caminar
+  - [ ] Saltar
+  - [ ] Ataque 
+  - [ ] Recibir daño
+  - [ ] Animación de derrota
+
+#### 3. Efectos visuales
+
+- [ ] Añadir feedback visual claro al recibir daño.
+
+#### 4. Escenarios
+
+- [ ] Diseñar fondo principal.
+- [ ] Comprobar que el fondo no distraiga del combate.
+
+#### 5. Interfaz (UI)
+
+- [ ] Diseñar barras de vida.
+- [ ] Diseñar pantalla de controles.
+- [ ] Diseñar pantalla de KO.
+
+#### 6. Coherencia y pruebas
+
+- [ ] Revisar que todas las animaciones tengan el mismo tamaño base.
+- [ ] Comprobar fluidez de animaciones.
+- [ ] Ajustar tiempos de ataque según jugabilidad.
+- [ ] Verificar legibilidad en combate rápido.
 
 ## **2. Arte**
 
