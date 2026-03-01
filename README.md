@@ -18,7 +18,7 @@ Nos encontramos en el planeta Namek, Goku consigue su transformación Super Saiy
 Queríamos que fuese un juego Pixel Art 2D, ya que es un estilo muy reconocible dentro del mundo de los videojuegos. Este estilo nos permite transmitir una estética clásica inspirada en los títulos arcade de los años 90, donde primaban los reflejos, la precisión y la espectacularidad visual. 
 ![Idle](img_Readme/boceto.jpg)
 
-###Lista de verificación
+### Lista de verificación
 #### 1. Identidad visual
 
 - [x] Definir estilo general Pixel Art 2D .
@@ -91,7 +91,17 @@ En los sprites los dos personajes hasta el momento (Cooler y Goku) estos cuentan
   
 	![muerte](img_Readme/muerte.gif)
 
-### **B. Interfaz de Usuario**
+### **B. Enemigos**	
+
+- **Enemigo dinámico:** Su labor será proteger la bola del dragón de *Goku* y *Cooler*.
+  
+	![muerte](img_Readme/ene_din.gif)
+
+- **Enemigo estático:** Es un afilado picho que hará daño a cualquiera que lo toque .
+  	
+	![muerte](img_Readme/ene_estatic.gif)
+
+### **C. Interfaz de Usuario**
 
 La interfaz no es solo visual, sino que forma parte de la experiencia funcional del juego:
 - **Barra de Salud:** La barra de salud es del estilo artístico de *Dragon Ball* ya que son rastreadores que muestran el estado de vida actual del jugador.
@@ -124,7 +134,7 @@ La interfaz no es solo visual, sino que forma parte de la experiencia funcional 
 
 	![K.O](img_Readme/Knockout.png)
 
-### **C. Sonidos**
+### **D. Sonidos**
 
 En el juego se han implementado varios sonidos para que la inmersión del juego se más realista y fiel a la serie.
 

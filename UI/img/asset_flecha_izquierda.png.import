@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cynrhcmg2kc1y"
-path="res://.godot/imported/asset_flecha_izquierda.png-95834b595294055a69ff9e7803f1ded2.ctex"
+path="res://.godot/imported/asset_flecha_izquierda.png-b1d92bb0fe1703ec4aef64bc6c461cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/asset_flecha_izquierda.png"
-dest_files=["res://.godot/imported/asset_flecha_izquierda.png-95834b595294055a69ff9e7803f1ded2.ctex"]
+source_file="res://ui/img/asset_flecha_izquierda.png"
+dest_files=["res://.godot/imported/asset_flecha_izquierda.png-b1d92bb0fe1703ec4aef64bc6c461cd1.ctex"]
 
 [params]
 
