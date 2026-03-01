@@ -6,15 +6,15 @@
 - Ángel Del Río
 
 
-## 1. Conceptualización
+## **1. Conceptualización**
 
 
 
-## 2. Arte
+## **2. Arte**
 
 En la parte visual se ha diseñado un juego estilo 2d con pixel art inspirado en juegos como Streat Figther, pero adaptado con personajes, fondos, escenario, interfaz grafica y sprites de la icónica seria de *Dragon Ball* 
 
-### A. Sprites de Personajes
+### **A. Sprites de Personajes**
 
 En los sprites los dos personajes hasta el momento (Cooler y Goku) estos cuentan con las mismas animaciones, a continuación solo se utilizará a un personaje para mostrar como se mueven.
 
@@ -42,7 +42,7 @@ En los sprites los dos personajes hasta el momento (Cooler y Goku) estos cuentan
   
 	![muerte](img_Readme/muerte.gif)
 
-### B. Interfaz de Usuario
+### **B. Interfaz de Usuario**
 
 La interfaz no es solo visual, sino que forma parte de la experiencia funcional del juego:
 - **Barra de Salud:** La barra de salud es del estilo artístico de *Dragon Ball* ya que son rastreadores que muestran el estado de vida actual del jugador.
@@ -75,7 +75,7 @@ La interfaz no es solo visual, sino que forma parte de la experiencia funcional 
 
 	![K.O](img_Readme/Knockout.png)
 
-### C. Sonidos
+### **C. Sonidos**
 
 En el juego se han implementado varios sonidos para que la inmersión del juego se más realista y fiel a la serie.
 
@@ -84,14 +84,14 @@ En el juego se han implementado varios sonidos para que la inmersión del juego 
 - **Sonido de golpeo:** Cuando los personajes dan un puñetazo se escucha un sonido de golpeo el cual refuerza la sensación de impacto y realismo de la batalla.
 -  **Sonido de K.O:** Cuando uno de los personaje muere y concluye la batalla se escucha un sondo diciendo "K.O".
 
-## 3. Programación
+## **3. Programación**
 
 En este apartado se detallan los elementos técnicos utilizados para el desarrollo del videojuego, explicando su funcionamiento de forma estructurada y clara.
 
 El juego ha sido desarrollado utilizando el motor **Godot Engine**, haciendo uso de nodos como `CharacterBody2D`, `Area2D`, `AnimationPlayer` y el sistema de señales para la comunicación entre elementos.
 
 
-### A. Pantallas
+### **A. Pantallas**
 
 La gestión de pantallas (menú, controles, combate, etc.) se ha implementado mediante el uso de escenas independientes.
 
@@ -104,7 +104,7 @@ Para cambiar entre pantallas se utiliza el método:
 Los botones del menú están conectados mediante señales, permitiendo ejecutar funciones específicas al ser pulsados.
 
 
-### B. Personajes
+### **B. Personajes**
 
 Los personajes están programados mediante scripts que heredan de `CharacterBody2D`, lo que permite aprovechar el sistema de físicas integrado del motor.
 
@@ -113,7 +113,7 @@ Ambos personajes comparten prácticamente la misma estructura lógica para garan
 La programación del personaje se divide en distintos sistemas:
 
 
-#### B.1 Sistema de Movimiento
+#### **B.1 Sistema de Movimiento**
 
 El movimiento horizontal se gestiona mediante:
 
@@ -126,7 +126,7 @@ El salto se controla verificando si el personaje está en el suelo con `is_on_fl
 La gravedad se aplica manualmente mediante una función que incrementa la velocidad vertical cuando el personaje no está apoyado en el suelo.
 
 
-#### B.2 Sistema de Animaciones
+#### **B.2 Sistema de Animaciones**
 
 Las animaciones están controladas mediante un `AnimationPlayer`.
 
@@ -144,7 +144,7 @@ Esto permite:
 La función `update_animation()` decide qué animación reproducir dependiendo del estado actual del personaje (idle, movimiento, salto, ataque, recibir golpe o muerte).
 
 
-#### B.3 Sistema de Combate
+#### **B.3 Sistema de Combate**
 
 El combate se basa en un sistema de detección por **hitboxes**.
 
@@ -165,7 +165,7 @@ Dentro de esa función:
 Esto evita que un jugador pueda recibir múltiples impactos consecutivos sin posibilidad de reacción.
 
 
-#### B.4 Sistema de Estados
+#### **B.4 Sistema de Estados**
 
 El personaje funciona mediante un sistema de estados booleanos:
 
@@ -187,7 +187,7 @@ Este sistema permite:
 La función `handle_invencible()` controla el tiempo de invulnerabilidad reduciendo un temporizador cada frame.
 
 
-#### B.5 Sistema de Vida
+#### **B.5 Sistema de Vida**
 
 Cada personaje tiene:
 
@@ -210,7 +210,7 @@ Al morir:
 Este sistema mantiene sincronizada la lógica del personaje con la interfaz gráfica.
 
 
-#### B.6 Sistema de Vida Extra
+#### **B.6 Sistema de Vida Extra**
 
 Se implementó un objeto coleccionable (Bola de Dragón) que aparece tras un tiempo determinado.
 
@@ -223,11 +223,81 @@ Cuando un jugador entra en contacto con ella:
 Con este objeto en combate se busca brindar mas dinamismo a la pelea y conseguir que los combates puedan cambiar su curso repentinamente haciéndolo más interesante.
 
 
-## 4 . Elementos Destacables
+### **C. Enemigos**
+
+Dentro del escenario se han implementado dos tipos de enemigos con comportamientos diferenciados: uno dinámico (con movimiento autónomo) y otro estático (orientado únicamente a la detección de daño).
+
+Ambos comparten la misma integración con el sistema de combate del jugador.
+
+
+#### **C.1 Enemigo Dinámico**
+
+El enemigo dinámico hereda de `CharacterBody2D`, lo que permite integrarlo dentro del sistema de físicas del juego.
+
+Su comportamiento se basa en tres pilares principales:
+
+**1. Control de físicas**
+
+En cada `physics_process`:
+
+- Se aplica la gravedad utilizando el valor global configurado en el proyecto.
+- Se utiliza `move_and_slide()` para gestionar desplazamiento y colisiones de forma coherente con el entorno.
+
+**2. Sistema de patrullaje**
+
+El movimiento se controla mediante una variable de dirección (`sentido`), que se invierte cuando:
+
+- Se detecta una colisión con una pared mediante `is_on_wall()`.
+- No se detecta suelo delante utilizando nodos `RayCast2D`.
+
+Este sistema permite un comportamiento autónomo sencillo sin necesidad de implementar una inteligencia artificial compleja.
+
+**3. Sistema de daño**
+
+El enemigo incorpora un `Area2D` que detecta la entrada de cuerpos mediante la señal `body_entered`.
+
+Cuando detecta un jugador:
+
+- Comprueba si pertenece al grupo `jugador1` o `jugador2`.
+- Verifica que tenga implementado el método `recibir_golpe()`.
+
+En caso afirmativo, llama a dicho método enviando el daño y su posición global.
+
+De esta forma, toda la lógica de daño permanece centralizada en el script del jugador.
+
+
+#### **C.2 Enemigo Estático**
+
+El enemigo estático hereda directamente de `Area2D`, ya que no requiere físicas ni movimiento.
+
+Su función se limita a actuar como zona de peligro dentro del escenario.
+
+Cuando un jugador entra en su área:
+
+- Se verifica que pertenezca a uno de los grupos de jugador.
+- Se comprueba la existencia del método `recibir_golpe()`.
+- Se ejecuta dicha función, aplicando daño automáticamente.
+
+Este diseño permite reutilizar completamente el sistema de vida, invencibilidad y retroceso del jugador sin duplicar lógica.
+
+
+#### **C.3 Integración con el Sistema General**
+
+Ambos tipos de enemigo utilizan el mismo método de daño (`recibir_golpe()`), lo que garantiza:
+
+- Compatibilidad con el sistema de estados.
+- Respeto del tiempo de invencibilidad.
+- Aplicación correcta del retroceso.
+- Coherencia con el sistema de vida y muerte.
+
+Gracias a esta arquitectura modular, los enemigos pueden ampliarse fácilmente sin modificar la base del sistema de combate.
+
+
+## **4. Elementos Destacables**
 
 En esta parte se detallan las mecánicas novedosas que aportan profundidad al gameplay y los problemas tenidos durante el desarrollo del proyecto de *Dragon Ball Close Combat*:
 	
-### A. Innovaciones
+### **A. Innovaciones**
 
 - **Sprite de vida vinculado a jugador:** La barra de vida está conectada directamente a los sprites, esto hace que cambie en tiempo real el estado de la vida del jugador, mostrando el color de la barra distinto según la cantidad de vida exacta que tenga el jugador en ese momento.
 - **Sistema de Regeneración de vida:** Se implementó un sistema donde una Bola de Dragón aparece en el escenario tras un tiempo determinado. Si el jugador la recoge y no ha alcanzado su nivel máximo de salud (7 vidas) se suma un punto de vida automáticamente, actualizando de esta forma su barra de vida.
@@ -238,5 +308,5 @@ En esta parte se detallan las mecánicas novedosas que aportan profundidad al ga
 
 - **Knockout:** Se programó una detección de muerte que al terminar el combate hace aparecer un *sprite* de **K.O** en pantalla con un audio acorde a la epicidad del combate. Segundos después de la aparición del **K.O** en pantalla se regresará automaticamente al menú de inicio para iniciar una nueva partida.
 
-### B. Problemas encontrados
+### **B. Problemas encontrados**
   
