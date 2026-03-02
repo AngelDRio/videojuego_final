@@ -396,3 +396,6 @@ Este se basaba en que si el personaje contaba con una inercia de movimiento, ya 
 **ChatGPT**: Se ha hecho uso del asistente virtual **ChatGPT** para la consulta de dudas sobre funciones concretas del lenguaje GDScript.
 
   
+## **6. GitHub**
+
+https://github.com/AngelDRio/videojuego_final

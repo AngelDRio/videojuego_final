@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckpi0ytj2av55"
-path="res://.godot/imported/asset_flecha_arriba.png-35cf26ce2b327a185cd09342013d46a6.ctex"
+path="res://.godot/imported/asset_flecha_arriba.png-a8a076d59b278a669e60058ee7324ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/img/asset_flecha_arriba.png"
-dest_files=["res://.godot/imported/asset_flecha_arriba.png-35cf26ce2b327a185cd09342013d46a6.ctex"]
+source_file="res://ui/img/asset_flecha_arriba.png"
+dest_files=["res://.godot/imported/asset_flecha_arriba.png-a8a076d59b278a669e60058ee7324ad5.ctex"]
 
 [params]
 
