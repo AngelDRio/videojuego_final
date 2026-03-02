@@ -385,8 +385,11 @@ Este se basaba en que si el personaje contaba con una inercia de movimiento, ya 
 ## **5. Herramientas utilizadas**
 
 **Godot Engine**: Se ha utilizado el motor de creación de videojuego **Godot Engine** para la creación del videojuego en su totalidad.
+
 **Deviant Art**: Se ha hecho uso de la página web **Deviant Art** para encontrar los assets necesarios para la creación de la parte gráfica del producto.
+
 **Aula Virtual**: Se han utilizado los apuntes publicados en el aula virtual del módulo por el profesor Julián Parra Perales para apoyar la conceptualización y programación del videojuego.
+
 **ChatGPT**: Se ha hecho uso del asistente virtual **ChatGPT** para la consulta de dudas sobre funciones concretas del lenguaje GDScript.
 
   
