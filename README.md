@@ -372,10 +372,21 @@ En esta parte se detallan las mecánicas novedosas que aportan profundidad al ga
 Durante el desarrollo de este proyecto nos encontramos con diferentes dificultades.
 
 **B.1 Hitbox**
-Un problema que tuvimos a la hora de programar las hitbox de golpeo de los personajes fue que, en un inicio, dibujamos la hitbox unicamente a un lateral del personaje y esperábamos poder rotar la hitbox conforme rotase el cuerpo del jugador. Finalmente esta mecánica no fue posible implementarla y decidimos tomar una solución más sencilla pero menos pulida, la cual fue ampliar la hitbox de golpeo para que esta sobresaliese por ambos lados.
+
+Un problema que tuvimos a la hora de programar las hitbox de golpeo de los personajes fue que, en un inicio, dibujamos la hitbox unicamente a un lateral del personaje y esperábamos poder rotar la hitbox conforme rotase el cuerpo del jugador.
+Finalmente esta mecánica no fue posible implementarla y decidimos tomar una solución más sencilla pero menos pulida, la cual fue ampliar la hitbox de golpeo para que esta sobresaliese por ambos lados.
 Este sería un punto que se debería corregir en futuras actualizaciones.
 
 **B.2 Deslizamiento de los personajes**
-A la hora de programar las físicas de ambos personajes encontramos un problema con el deslizamiento. Este se basaba en que si el personaje contaba con una inercia de movimiento, ya fuese vertical o horizontal, y este realizaba la acción de atacar, el personaje comenzaba un deslizamiento infinito a velocidad constante el cual rompía completamente la física y fluidez del gameplay. Para solucionar dicho problema se decidió cancelar cualquier tipo de movimiento causado por inercia en el momento en el que el jugador decidiese atacar con su personaje, solucionando así este problema.
+
+A la hora de programar las físicas de ambos personajes encontramos un problema con el deslizamiento.
+Este se basaba en que si el personaje contaba con una inercia de movimiento, ya fuese vertical o horizontal, y este realizaba la acción de atacar, el personaje comenzaba un deslizamiento infinito a velocidad constante el cual rompía completamente la física y fluidez del gameplay. Para solucionar dicho problema se decidió cancelar cualquier tipo de movimiento causado por inercia en el momento en el que el jugador decidiese atacar con su personaje, solucionando así este problema.
+
+## **5. Herramientas utilizadas**
+
+**Godot Engine**: Se ha utilizado el motor de creación de videojuego **Godot Engine** para la creación del videojuego en su totalidad.
+**Deviant Art**: Se ha hecho uso de la página web **Deviant Art** para encontrar los assets necesarios para la creación de la parte gráfica del producto.
+**Aula Virtual**: Se han utilizado los apuntes publicados en el aula virtual del módulo por el profesor Julián Parra Perales para apoyar la conceptualización y programación del videojuego.
+**ChatGPT**: Se ha hecho uso del asistente virtual **ChatGPT** para la consulta de dudas sobre funciones concretas del lenguaje GDScript.
 
   
