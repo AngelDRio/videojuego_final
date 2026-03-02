@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://xfac6u2ikm5d"
-path="res://.godot/imported/k-o-sound-effect.mp3-9babe32626b4cbae6f2cf95d469f0915.mp3str"
+path="res://.godot/imported/k-o-sound-effect.mp3-9734f192652edc521b21460e04fee6b0.mp3str"
 
 [deps]
 
-source_file="res://ui/knockout/k-o-sound-effect.mp3"
-dest_files=["res://.godot/imported/k-o-sound-effect.mp3-9babe32626b4cbae6f2cf95d469f0915.mp3str"]
+source_file="res://UI/Knockout/k-o-sound-effect.mp3"
+dest_files=["res://.godot/imported/k-o-sound-effect.mp3-9734f192652edc521b21460e04fee6b0.mp3str"]
 
 [params]
 
