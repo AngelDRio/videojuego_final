@@ -374,12 +374,15 @@ Durante el desarrollo de este proyecto nos encontramos con diferentes dificultad
 **B.1 Hitbox**
 
 Un problema que tuvimos a la hora de programar las hitbox de golpeo de los personajes fue que, en un inicio, dibujamos la hitbox unicamente a un lateral del personaje y esperábamos poder rotar la hitbox conforme rotase el cuerpo del jugador.
+
 Finalmente esta mecánica no fue posible implementarla y decidimos tomar una solución más sencilla pero menos pulida, la cual fue ampliar la hitbox de golpeo para que esta sobresaliese por ambos lados.
+
 Este sería un punto que se debería corregir en futuras actualizaciones.
 
 **B.2 Deslizamiento de los personajes**
 
 A la hora de programar las físicas de ambos personajes encontramos un problema con el deslizamiento.
+
 Este se basaba en que si el personaje contaba con una inercia de movimiento, ya fuese vertical o horizontal, y este realizaba la acción de atacar, el personaje comenzaba un deslizamiento infinito a velocidad constante el cual rompía completamente la física y fluidez del gameplay. Para solucionar dicho problema se decidió cancelar cualquier tipo de movimiento causado por inercia en el momento en el que el jugador decidiese atacar con su personaje, solucionando así este problema.
 
 ## **5. Herramientas utilizadas**
